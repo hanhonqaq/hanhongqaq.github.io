@@ -1,0 +1,42 @@
+#entirety {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+#entirety #header {
+  background-color: aqua;
+}
+#entirety #header header {
+  height: 350px;
+  text-align: center;
+}
+#entirety #header header img {
+  margin-top: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+#entirety #content {
+  overflow: hidden;
+}
+#entirety #content .box1 #car .box2 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#entirety #content .box1 #car .box2 img {
+  width: 100%;
+  height: 100%;
+}
+.box2 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.box2 img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=./index.css.map */

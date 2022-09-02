@@ -1,0 +1,694 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  background-color: #0c5d69;
+}
+.header .w {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 15px 0;
+}
+.header .w .left {
+  float: left;
+  overflow: hidden;
+  font-size: 13px;
+}
+.header .w .left li {
+  color: white;
+  float: left;
+  margin-right: 20px;
+}
+.header .w .left li i {
+  margin-right: 10px;
+}
+.header .w .right {
+  float: right;
+  overflow: hidden;
+}
+.header .w .right li {
+  float: left;
+  color: white;
+}
+.header .w .right li i {
+  margin-left: 20px;
+}
+.nav .w {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.nav .w img {
+  float: left;
+  margin-right: 120px;
+  margin-top: 10px;
+}
+.nav .w ul.menu {
+  float: left;
+  margin-top: 5px;
+  position: relative;
+}
+.nav .w ul.menu li {
+  float: left;
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+  text-align: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.nav .w ul.menu li a {
+  line-height: 30px;
+  color: black;
+  position: relative;
+}
+.nav .w ul.menu li a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #30adc0;
+  left: 0;
+  bottom: -5px;
+  transform: scale(0);
+}
+.nav .w ul.menu li:hover a::after {
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+.nav .w ul.menu li:nth-child(1) a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #30adc0;
+  left: 0;
+  bottom: -5px;
+  transform: scale(1);
+}
+.nav .w ul.menu li ul {
+  position: absolute;
+  top: 30px;
+  left: 286px;
+  display: none;
+  border: none;
+}
+.nav .w ul.menu li ul li {
+  float: none;
+  width: 160px;
+  height: 40px;
+  color: white;
+  background-color: black;
+}
+.nav .w ul.menu li ul li a {
+  color: white;
+  float: left;
+  line-height: 40px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.nav .w ul.menu li ul li a::after {
+  display: none;
+}
+.nav .w ul.menu li ul li:nth-child(1) a::after {
+  display: none;
+}
+.nav .w ul.menu li:hover ul {
+  display: block;
+}
+.nav .w button {
+  float: right;
+  width: 130px;
+  height: 40px;
+  line-height: 30px;
+  background-color: white;
+  border: 2px solid #30adc0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.hero {
+  background: url("../image/hero-bg.jpg") no-repeat;
+  background-size: cover;
+}
+.hero .w {
+  margin: 0 auto;
+  width: 1000px;
+}
+.hero .w .text {
+  padding: 180px 0;
+}
+.hero .w .text p {
+  color: #54b5c7;
+}
+.hero .w .text h2 {
+  width: 600px;
+  font-weight: bold;
+  font-size: 48px;
+  color: #111111;
+  margin-bottom: 20px;
+}
+.hero .w .text button {
+  color: white;
+  width: 200px;
+  height: 50px;
+  background-color: #54b5c7;
+  border: 1px solid #54b5c7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.consultation {
+  position: relative;
+}
+.consultation .w {
+  margin: 0 auto;
+  width: 1000px;
+  overflow: hidden;
+}
+.consultation .w .form-out {
+  width: 300px;
+  float: left;
+  margin: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: -80px;
+}
+.consultation .w .form-out .form-in {
+  width: 80%;
+  margin: 50px auto;
+}
+.consultation .w .form-out .form-in p {
+  color: #888888;
+  font-size: 15px;
+}
+.consultation .w .form-out .form-in h2 {
+  font-size: 36px;
+  color: #111111;
+  margin-top: 8px;
+}
+.consultation .w .form-out .form-in form .input {
+  margin-bottom: 20px;
+}
+.consultation .w .form-out .form-in form .input input {
+  width: 90%;
+  padding-left: 20px;
+  outline: none;
+  line-height: 45px;
+  margin-left: 5px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+}
+.consultation .w .form-out .form-in form .input input:focus {
+  border: 1px solid #9d9d9d;
+}
+.consultation .w .form-out .form-in form .input .select {
+  width: 90%;
+  height: 50px;
+  outline: none;
+  color: #666666;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.consultation .w .form-out .form-in form .icon {
+  position: relative;
+}
+.consultation .w .form-out .form-in form .icon i {
+  color: #666666;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.consultation .w .form-out .form-in form .select:focus {
+  border: 1px solid #9d9d9d;
+}
+.consultation .w .form-out .form-in form .btn {
+  width: 96%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: #13A2B7;
+  border: none;
+  margin: 10px 0;
+}
+.consultation .w .consultation-text {
+  float: right;
+  width: 680px;
+  border-bottom: 1px solid #f2f2f2;
+  overflow: hidden;
+  padding: 100px 0;
+}
+.consultation .w .consultation-text .left {
+  width: calc(50% - 10px * 2);
+  float: left;
+  margin: 0 10px;
+}
+.consultation .w .consultation-text .left .title {
+  font-size: 15px;
+  color: #888888;
+  margin-bottom: 10px;
+}
+.consultation .w .consultation-text .left h2 {
+  font-size: 36px;
+  color: #111111;
+  font-weight: bold;
+}
+.consultation .w .consultation-text .left h2 span {
+  color: #13a2b7;
+}
+.consultation .w .consultation-text .left .text {
+  font-size: 15px;
+  line-height: 25px;
+  color: #444444;
+}
+.consultation .w .consultation-text .right {
+  float: right;
+  width: 50%;
+  height: 265px;
+  background-color: aqua;
+  background: url("../image/consultation-video.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+}
+.consultation .w .consultation-text .right .icon {
+  width: 50px;
+  height: 50px;
+  background-color: #13A2B7;
+  border-radius: 50%;
+  margin: 107.5px calc((100% - 50px) / 2);
+}
+.consultation .w .consultation-text .right .icon i {
+  font-size: 25px;
+  line-height: 50px;
+  color: white;
+}
+.offer {
+  padding: 50px 0;
+}
+.offer .w {
+  width: 1000px;
+  margin: 0 auto;
+}
+.offer .w h3.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.offer .w h3.section-title .sub-title {
+  font-size: 14px;
+  color: #888888;
+}
+.offer .w h3.section-title .title {
+  font-size: 28px;
+}
+.offer .w .content {
+  overflow: hidden;
+}
+.offer .w .content .card {
+  width: calc(25% - 15px * 2);
+  text-align: center;
+  float: left;
+  margin: 0 15px;
+}
+.offer .w .content .card h5 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+.service {
+  background: url("../image/services-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 50px 0;
+}
+.service .w {
+  margin: 0 auto;
+  width: 1000px;
+}
+.service .w .service-header {
+  overflow: hidden;
+}
+.service .w .service-header .title {
+  padding-top: 50px;
+  margin-left: 15px;
+  float: left;
+}
+.service .w .service-header .title .sub {
+  font-size: 15px;
+  color: #19a2b7;
+}
+.service .w .service-header .title h3 {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 50px;
+}
+.service .w .service-header .bt {
+  width: 180px;
+  height: 48px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 48px;
+  border: 2px solid #13a2b7;
+  border-radius: 5px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 50px;
+}
+.service .w .service-header .bt a {
+  text-decoration: none;
+  color: white;
+}
+.service .w .content {
+  overflow: hidden;
+}
+.service .w .content .card {
+  width: calc(50% - 15px * 2 - 70px);
+  height: 88px;
+  padding: 45px 30px 45px 40px;
+  background-color: white;
+  border-radius: 5px;
+  float: left;
+  margin: 10px 15px;
+  overflow: hidden;
+}
+.service .w .content .card .icon {
+  float: left;
+}
+.service .w .content .card .text {
+  width: 295px;
+  float: left;
+  margin-left: 30px;
+}
+.service .w .content .card .text h5 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+.service .w .content .card .text p {
+  font-size: 15px;
+  color: #666666;
+}
+.service .w .content .card:hover {
+  background-color: #13a2b7;
+  color: white;
+}
+.service .w .content .card:hover p {
+  color: white;
+}
+.doctors {
+  padding: 50px 0;
+}
+.doctors .w {
+  width: 1000px;
+  margin: 0 auto;
+}
+.doctors .w .title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+.doctors .w .title p {
+  color: #888888;
+  font-size: 15px;
+}
+.doctors .w .title h3 {
+  font-size: 36px;
+  color: #111111;
+  font-weight: bold;
+}
+.doctors .w ul.list {
+  overflow: hidden;
+}
+.doctors .w ul.list .card {
+  width: 303px;
+  float: left;
+  margin: 15px;
+  text-align: center;
+}
+.doctors .w ul.list .card img {
+  width: 100%;
+  border-radius: 50%;
+  border: 10px solid white;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.doctors .w ul.list .card img:hover {
+  border: 10px solid #13a2b7;
+}
+.doctors .w ul.list .card h5 {
+  color: #111111;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.doctors .w ul.list .card p {
+  font-size: 15px;
+  color: #13A2B7;
+  margin-bottom: 12px;
+}
+.doctors .w ul.list .card .icons i {
+  margin: 5px;
+  cursor: pointer;
+}
+.gallery {
+  overflow: hidden;
+  height: 620px;
+}
+.gallery ul.left {
+  width: 75%;
+  float: left;
+  overflow: hidden;
+}
+.gallery ul.left li {
+  width: calc(33.33% - 20px);
+  height: 300px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center top;
+}
+.gallery ul.left li:nth-child(1) {
+  background-image: url("../image/gallery-1.jpg");
+}
+.gallery ul.left li:nth-child(2) {
+  background-image: url("../image/gallery-2.jpg");
+}
+.gallery ul.left li:nth-child(3) {
+  background-image: url("../image/gallery-3.jpg");
+}
+.gallery ul.left li:nth-child(4) {
+  background-image: url("../image/gallery-5.jpg");
+}
+.gallery ul.left li:nth-child(5) {
+  background-image: url("../image/gallery-6.jpg");
+}
+.gallery ul.left li:nth-child(6) {
+  background-image: url("../image/gallery-7.jpg");
+}
+.gallery .right {
+  width: 25%;
+  height: 620px;
+  background-color: #62ff00;
+  float: right;
+  background-image: url("../image/gallery-4.jpg");
+  background-size: cover;
+  background-position: center top;
+}
+.news {
+  padding: 50px 0;
+}
+.news .w {
+  width: 1000px;
+  margin: 0 auto;
+}
+.news .w header {
+  overflow: hidden;
+}
+.news .w header .title {
+  float: left;
+  height: 120px;
+}
+.news .w header .title p {
+  font-size: 15px;
+  color: #888888;
+}
+.news .w header .title h3 {
+  font-size: 36px;
+  color: #111111;
+  font-weight: bold;
+  margin-top: 8px;
+}
+.news .w header button {
+  width: 200px;
+  height: 48px;
+  background-color: white;
+  border: 2px solid #13a2b7;
+  float: right;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+.news .w .list {
+  overflow: hidden;
+}
+.news .w .list li {
+  width: 33.33%;
+  float: left;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+.news .w .list li .card {
+  padding: 15px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
+}
+.news .w .list li .card a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #282828;
+}
+.news .w .list li .card p {
+  color: #7e7e7e;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.news .w .list li .card .author {
+  line-height: 30px;
+  font-size: 12px;
+  color: #888888;
+}
+.news .w .list li .card .author .avatar {
+  line-height: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.news .w .list li .card .author .name {
+  font-size: 13px;
+  vertical-align: middle;
+}
+.news .w .list li .card .author .point {
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  background: #888888;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.news .w .list li .card .author .time {
+  font-size: 13px;
+  vertical-align: middle;
+}
+.news .w .list li .card:hover {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+}
+.news .w .list li .card:hover a {
+  text-decoration: underline;
+}
+.footer {
+  background-color: #191919;
+  color: white;
+}
+.footer .concate {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 0;
+}
+.footer .concate .wrap {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.footer .concate .wrap .logo {
+  float: left;
+  margin-top: 13px;
+}
+.footer .concate .wrap .icons {
+  float: right;
+  overflow: hidden;
+}
+.footer .concate .wrap .icons li {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  float: left;
+  margin-left: 10px;
+  background-color: #2a3334;
+}
+.footer .concate .wrap .icons li i {
+  color: white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.footer .nav {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 0;
+}
+.footer .nav ul.menu {
+  float: left;
+  overflow: hidden;
+}
+.footer .nav ul.menu li.menu-card {
+  float: left;
+  margin-right: 30px;
+}
+.footer .nav ul.menu li.menu-card h5 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 3em;
+}
+.footer .nav ul.menu li.menu-card ul.submenu li {
+  line-height: 2em;
+  font-size: 14px;
+  color: #c4c4c4;
+}
+.footer .nav ul.menu li.menu-card ul.submenu li i {
+  margin-right: 10px;
+  color: #13958f;
+}
+.footer .nav ul.menu li.menu-card:nth-child(3) ul.submenu li {
+  margin-bottom: 25px;
+}
+.footer .nav .map {
+  width: 350px;
+  height: 214px;
+  background-color: #dddddd;
+  float: right;
+}
+.footer .copyright {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 14px;
+  color: #c4c4c4;
+  padding-bottom: 25px;
+}
+.footer .copyright .left {
+  float: left;
+}
+.footer .copyright .left i {
+  color: #13958f;
+}
+.footer .copyright .left a {
+  text-decoration: none;
+  color: #13958f;
+}
+.footer .copyright .right {
+  float: right;
+}
+.footer .copyright .right span {
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  background: #c4c4c4;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+/*# sourceMappingURL=./index.css.map */
