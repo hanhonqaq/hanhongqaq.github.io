@@ -1,0 +1,683 @@
+.bigbox .box2 .bigbox {
+  background-color: #b2b2b2;
+}
+.bigbox .box2 .bigbox .box {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 875px;
+}
+.bigbox .box2 .bigbox .box .hand {
+  width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+.bigbox .box2 .bigbox .box .hand .top {
+  width: 1200px;
+  overflow: hidden;
+}
+.bigbox .box2 .bigbox .box .hand .top .logo {
+  float: left;
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+.bigbox .box2 .bigbox .box .hand .top .logo h1 span {
+  color: red;
+}
+.bigbox .box2 .bigbox .box .hand .top .i {
+  float: right;
+}
+.bigbox .box2 .bigbox .box .hand .top .i .a {
+  float: left;
+}
+.bigbox .box2 .bigbox .box .hand .top .i .a i {
+  margin: 5px 10px;
+  color: #fdb62f;
+  font-size: 2em;
+}
+.bigbox .box2 .bigbox .box .hand .top .i .a p {
+  float: right;
+  width: 250px;
+  color: white;
+  font-weight: lighter;
+}
+.bigbox .box2 .bigbox .box .hand .top .i .b {
+  float: right;
+}
+.bigbox .box2 .bigbox .box .hand .top .i .b i {
+  margin: 5px 10px;
+  color: #fd4d40;
+  font-size: 2em;
+}
+.bigbox .box2 .bigbox .box .hand .top .i .b p {
+  float: right;
+  width: 300px;
+  color: white;
+  font-weight: lighter;
+}
+.bigbox .box2 .bigbox .box .hand .bottom {
+  width: 1200px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 50px;
+  padding: 25px 40px;
+  box-sizing: border-box;
+}
+.bigbox .box2 .bigbox .box .hand .bottom .left {
+  float: left;
+}
+.bigbox .box2 .bigbox .box .hand .bottom .left ul li {
+  float: left;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.bigbox .box2 .bigbox .box .hand .bottom .left ul li:nth-child(1) {
+  color: red;
+}
+.bigbox .box2 .bigbox .box .hand .bottom .fa {
+  float: right;
+}
+.bigbox .box2 .bigbox .box .hand .bottom .fa i {
+  margin-left: 40px;
+  cursor: pointer;
+}
+.bigbox .box2 .bigbox .box .hand .bottom .fa i:nth-child(3) {
+  color: #61c3b0;
+}
+.bigbox .box2 .bigbox .box .hand .bottom .fa i:nth-child(2) {
+  color: #71bc42;
+}
+.bigbox .box2 .bigbox .box .hand .bottom .fa i:nth-child(1) {
+  color: #fdb62f;
+}
+.bigbox .box2 .bigbox .box .body .nav {
+  float: left;
+  margin-top: 300px;
+}
+.bigbox .box2 .bigbox .box .body .nav .a {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "Indie Flower", cursive !important;
+}
+.bigbox .box2 .bigbox .box .body .nav .b {
+  width: 400px;
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.bigbox .box2 .bigbox .box .body .nav .c {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+.bigbox .box2 .bigbox .box .body .nav button {
+  padding: 40px 30px;
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 50px 0;
+  cursor: pointer;
+}
+.bigbox .box2 .bigbox .box .body .nav button:hover {
+  background-color: #c82333;
+}
+.bigbox .box2 .bigbox .box .img {
+  float: right;
+  position: relative;
+  top: -175px;
+  right: -30px;
+  z-index: 1;
+}
+.bigbox .box2 .bigbox .box::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.bigbox .box3 .bigbox {
+  padding: 50px;
+  margin: 100px;
+}
+.bigbox .box3 .bigbox .box {
+  width: 1200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+.bigbox .box3 .bigbox .box .care1 {
+  width: 340px;
+  float: left;
+  margin: 30px;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  position: absolute;
+  top: 0px;
+  left: -30px;
+}
+.bigbox .box3 .bigbox .box .care1 i {
+  font-size: 30px;
+  color: white;
+  background-color: red;
+  padding: 20px;
+  border-radius: 50px;
+  position: absolute;
+  right: 110px;
+  z-index: 2;
+}
+.bigbox .box3 .bigbox .box .care1 .a {
+  position: absolute;
+  padding: 50px;
+  background-color: red;
+  top: 30px;
+  left: 0;
+}
+.bigbox .box3 .bigbox .box .care1 .a h3 {
+  color: white;
+}
+.bigbox .box3 .bigbox .box .care1 .a p {
+  color: white;
+  width: 250px;
+  line-height: 2em;
+  margin: 15px;
+}
+.bigbox .box3 .bigbox .box .care2 {
+  width: 340px;
+  height: 290px;
+  float: left;
+  margin: 30px;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 380px;
+}
+.bigbox .box3 .bigbox .box .care2 i {
+  font-size: 30px;
+  color: white;
+  background-color: #fdb62f;
+  padding: 20px;
+  border-radius: 50px;
+  position: absolute;
+  right: 110px;
+  z-index: 2;
+}
+.bigbox .box3 .bigbox .box .care2 .a {
+  position: absolute;
+  padding: 50px;
+  background-color: #fdb62f;
+  top: 30px;
+  left: 0;
+}
+.bigbox .box3 .bigbox .box .care2 .a h3 {
+  color: white;
+}
+.bigbox .box3 .bigbox .box .care2 .a p {
+  color: white;
+  width: 250px;
+  line-height: 2em;
+  margin: 15px;
+}
+.bigbox .box3 .bigbox .box .care3 {
+  width: 340px;
+  float: left;
+  margin: 30px;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 788px;
+}
+.bigbox .box3 .bigbox .box .care3 i {
+  font-size: 30px;
+  color: white;
+  background-color: #16c3b0;
+  padding: 20px;
+  border-radius: 50px;
+  position: absolute;
+  right: 110px;
+  z-index: 2;
+}
+.bigbox .box3 .bigbox .box .care3 .a {
+  position: absolute;
+  padding: 50px;
+  background-color: #16c3b0;
+  top: 30px;
+  left: 0;
+}
+.bigbox .box3 .bigbox .box .care3 .a h3 {
+  color: white;
+}
+.bigbox .box3 .bigbox .box .care3 .a p {
+  color: white;
+  width: 250px;
+  line-height: 2em;
+  margin: 15px;
+}
+.bigbox .box3 .bigbox .box::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.bigbox .box4 .bigbox {
+  padding: 50px;
+}
+.bigbox .box4 .bigbox .box {
+  width: 1200px;
+  margin: 0 auto;
+}
+.bigbox .box4 .bigbox .box .left {
+  float: left;
+  font-size: 0;
+  width: 50%;
+}
+.bigbox .box4 .bigbox .box .left img {
+  height: 500px;
+}
+.bigbox .box4 .bigbox .box .right {
+  float: right;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0 80px;
+}
+.bigbox .box4 .bigbox .box .right span {
+  color: red;
+  font-size: 20px;
+  font-family: "Indie Flower", cursive !important;
+}
+.bigbox .box4 .bigbox .box .right h3 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.bigbox .box4 .bigbox .box .right p {
+  line-height: 2em;
+  font-size: 20px;
+  color: #6d4d59;
+}
+.bigbox .box4 .bigbox .box .right button {
+  padding: 40px 30px;
+  border-radius: 40px 0;
+  border: none;
+  background-color: #ffc107;
+  margin-top: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.bigbox .box4 .bigbox .box .right button:hover {
+  background-color: #e0a800;
+}
+.bigbox .box4 .bigbox .box::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bigbox .box5 .bigbox {
+  background-color: #17a2b8;
+  padding: 50px;
+}
+.bigbox .box5 .bigbox .box {
+  width: 1200px;
+  margin: 0 auto;
+}
+.bigbox .box5 .bigbox .box .top {
+  text-align: center;
+}
+.bigbox .box5 .bigbox .box .top p {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "Indie Flower", cursive !important;
+}
+.bigbox .box5 .bigbox .box .top h3 {
+  color: white;
+  font-size: 40px;
+}
+.bigbox .box5 .bigbox .box .botton .care {
+  width: 350px;
+  float: left;
+  background-color: white;
+  margin: 25px;
+  text-align: center;
+  border-radius: 10px;
+}
+.bigbox .box5 .bigbox .box .botton .care img {
+  margin: 20px;
+}
+.bigbox .box5 .bigbox .box .botton .care h5 {
+  color: #16c3b0;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.bigbox .box5 .bigbox .box .botton .care p {
+  color: #77778d;
+  width: 220px;
+  margin-left: 65px;
+  line-height: 2em;
+}
+.bigbox .box5 .bigbox .box .botton .care button {
+  padding: 15px 30px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 30px 0;
+  margin-bottom: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.bigbox .box5 .bigbox .box .botton .care:nth-child(1) button {
+  background-color: red;
+  color: white;
+}
+.bigbox .box5 .bigbox .box .botton .care:nth-child(1) button:hover {
+  background-color: #c82333;
+}
+.bigbox .box5 .bigbox .box .botton .care:nth-child(2) h5 {
+  color: #88bd60;
+}
+.bigbox .box5 .bigbox .box .botton .care:nth-child(2) button {
+  background-color: #ffc107;
+}
+.bigbox .box5 .bigbox .box .botton .care:nth-child(2) button:hover {
+  background-color: #e0a800;
+}
+.bigbox .box5 .bigbox .box .botton .care:nth-child(3) h5 {
+  color: #dc4054;
+}
+.bigbox .box5 .bigbox .box .botton .care:nth-child(3) button {
+  background-color: #71bc42;
+  transition: all 0.3s;
+}
+.bigbox .box5 .bigbox .box .botton .care:nth-child(3) button:hover {
+  background-color: #60a038;
+  color: white;
+}
+.bigbox .box5 .bigbox .box::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bigbox .box6 .bigbox {
+  padding: 30px;
+}
+.bigbox .box6 .bigbox .box {
+  width: 1200px;
+  margin: 0 auto;
+}
+.bigbox .box6 .bigbox .box .left {
+  float: left;
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.bigbox .box6 .bigbox .box .left span {
+  color: red;
+  font-size: 20px;
+  font-family: "Indie Flower", cursive !important;
+}
+.bigbox .box6 .bigbox .box .left h3 {
+  font-size: 35px;
+  margin: 10px 0;
+}
+.bigbox .box6 .bigbox .box .left p {
+  line-height: 2em;
+  font-weight: lighter;
+}
+.bigbox .box6 .bigbox .box .care {
+  width: 33.33%;
+  float: left;
+  box-sizing: border-box;
+  padding: 70px 50px;
+}
+.bigbox .box6 .bigbox .box .care i.a {
+  padding: 25px 20px;
+  border-radius: 50px;
+  background-color: #16c3b0;
+  margin-top: 60px;
+  box-shadow: 0 0 0 5px white, 0 0 0 10px #16c3b0;
+}
+.bigbox .box6 .bigbox .box .care h5 {
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+.bigbox .box6 .bigbox .box .care .box1 i {
+  margin-bottom: 15px;
+  float: left;
+  margin-right: 20px;
+  color: #68d5e8;
+}
+.bigbox .box6 .bigbox .box .care .box1 p {
+  margin-bottom: 15px;
+  font-weight: lighter;
+}
+.bigbox .box6 .bigbox .box .care button {
+  margin-top: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 30px 0;
+  border: none;
+  background-color: #16c3b0;
+  cursor: pointer;
+}
+.bigbox .box6 .bigbox .box .care2 {
+  width: 33.33%;
+  float: left;
+  box-sizing: border-box;
+  padding: 70px 50px;
+}
+.bigbox .box6 .bigbox .box .care2 i.a {
+  padding: 25px 20px;
+  border-radius: 50px;
+  background-color: #fd4d40;
+  margin-top: 60px;
+  box-shadow: 0 0 0 5px white, 0 0 0 10px #fd4d40;
+}
+.bigbox .box6 .bigbox .box .care2 h5 {
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+.bigbox .box6 .bigbox .box .care2 .box1 i {
+  margin-bottom: 15px;
+  float: left;
+  margin-right: 20px;
+  color: #fd4d40;
+}
+.bigbox .box6 .bigbox .box .care2 .box1 p {
+  margin-bottom: 15px;
+  font-weight: lighter;
+}
+.bigbox .box6 .bigbox .box .care2 button {
+  margin-top: 50px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 30px 0;
+  border: none;
+  background-color: #fd4d40;
+  color: white;
+  cursor: pointer;
+}
+.bigbox .box6 .bigbox .box::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bigbox .box7 .bigbox .box {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.bigbox .box7 .bigbox .box .hand {
+  text-align: center;
+}
+.bigbox .box7 .bigbox .box .hand p {
+  color: red;
+  font-family: "Indie Flower", cursive !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+.bigbox .box7 .bigbox .box .hand h3 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+.bigbox .box7 .bigbox .box .body {
+  overflow: hidden;
+  padding: 20px;
+  width: 800px;
+  height: 300px;
+  background-color: #fd4d40;
+  margin-left: 200px;
+}
+.bigbox .box7 .bigbox .box .body .img {
+  float: left;
+  margin: 30px 30px;
+  margin-left: 30px;
+}
+.bigbox .box7 .bigbox .box .body .box1 {
+  float: right;
+  margin: 30px 50px;
+}
+.bigbox .box7 .bigbox .box .body .box1 .a {
+  font-size: 20px;
+  color: white;
+}
+.bigbox .box7 .bigbox .box .body .box1 .b {
+  color: #fe9d95;
+}
+.bigbox .box7 .bigbox .box .body .box1 .c {
+  width: 550px;
+  line-height: 2em;
+  color: white;
+  font-size: 20px;
+  float: left;
+}
+.bigbox .box7 .bigbox .box .foot {
+  text-align: center;
+  margin-left: 150px;
+}
+.bigbox .box7 .bigbox .box .foot .a {
+  float: left;
+  margin: 30px 75px ;
+}
+.bigbox .box7 .bigbox .box .foot .a span {
+  font-size: 35px;
+}
+.bigbox .box7 .bigbox .box .foot .a p {
+  font-weight: lighter;
+}
+.bigbox .box8 .bigbox {
+  background-color: #ffc107;
+  padding: 40px;
+}
+.bigbox .box8 .bigbox .box {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.bigbox .box8 .bigbox .box .left {
+  float: left;
+}
+.bigbox .box8 .bigbox .box .left h3 {
+  font-size: 40px;
+  color: white;
+}
+.bigbox .box8 .bigbox .box .right {
+  float: right;
+}
+.bigbox .box8 .bigbox .box .right button {
+  padding: 20px 50px;
+  font-size: 15px;
+  border-radius: 30px 0;
+  border: none;
+  color: white;
+  background-color: #dc3545;
+  cursor: pointer;
+}
+.bigbox .box8 .bigbox .box .right button:hover {
+  background-color: #c82333;
+}
+.bigbox .box9 .bigbox {
+  background-color: #343a40;
+  padding: 50px;
+}
+.bigbox .box9 .bigbox .box {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+.bigbox .box9 .bigbox .box .left {
+  float: left;
+  width: 500px;
+}
+.bigbox .box9 .bigbox .box .left h5 {
+  color: #fd4540;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.bigbox .box9 .bigbox .box .left .top p {
+  width: 350px;
+  line-height: 1.5em;
+  color: #d6d8d9;
+  margin-bottom: 40px;
+}
+.bigbox .box9 .bigbox .box .left .botton input {
+  width: 250px;
+  font-size: 20px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+}
+.bigbox .box9 .bigbox .box .left .botton button {
+  padding: 18px;
+  border-radius: 60px;
+  background-color: #dc3545;
+  border: none;
+  color: #d6d8d9;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.bigbox .box9 .bigbox .box .left .botton button:hover {
+  background-color: #c82333;
+}
+.bigbox .box9 .bigbox .box .right {
+  float: right;
+  width: 500px;
+}
+.bigbox .box9 .bigbox .box .right .a {
+  color: red;
+  margin-bottom: 10px;
+}
+.bigbox .box9 .bigbox .box .right .b {
+  color: #d6d8d9;
+  cursor: pointer;
+}
+.bigbox .box9 .bigbox .box .right .left {
+  float: left;
+  width: 200px;
+  line-height: 2em;
+}
+.bigbox .box9 .bigbox .box .right .right {
+  width: 200px;
+  float: right;
+  line-height: 2em;
+  margin-right: 50px;
+}
+.bigbox .box9 .bigbox .box1 {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.bigbox .box9 .bigbox .box1 i {
+  color: red;
+}
+/*# sourceMappingURL=./xm3.css.map */
