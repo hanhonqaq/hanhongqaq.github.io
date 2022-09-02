@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 强制ie浏览器使用 最新edge渲染引擎-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- 响应式网页必须 -->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./餐厅.css">
+    <link rel="stylesheet" href="ct.css">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="box">
+        <div class="hand">
+            <div class="title">DELICIOUS <span>Food</span></div>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <!-- Button trigger modal -->
+                <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Read More
+                </button> -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">DELICIOUS <span>Food</span></h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="./img/2.jpg" alt="" width="100%">
+                                <p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac
+                                    rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis
+                                    nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis
+                                    porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus
+                                    ultrices ullamcorper. Cras tempor massa luctus, varius lacus sit amet, blandit
+                                    lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="carousel-caption">
+                            <h5>Lorem ipsum</h5>
+                            <p>Curabitur eget metus eget erat vehicula semper vitae sed leo</p>
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                                data-target="#myModal">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h5>Nullam semper</h5>
+                            <p>Quisque nisl risus, egestas in convallis vitae, fringilla cursus magna</p>
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                                data-target="#myModal">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <h5>Duis tempor</h5>
+                            <p>Suspendisse bibendum dictum metus, at finibus elit dignissim nec</p>
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                                data-target="#myModal">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="header-top-info">
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                        <nav>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="#about" class="scroll">About</a></li>
+                                <li><a href="#services" class="scroll">Services</a></li>
+                                <li><a href="#specials" class="scroll">Specials</a></li>
+                                <li><a href="#team" class="scroll">Team</a></li>
+                                <li><a href="#news" class="scroll">News</a></li>
+                                <li><a href="#mail" class="scroll">Mail Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+        </div>
+
+        <div class="welcome" id="welcome">
+            <div class="container">
+                <div class="w3-welcome-heading">
+                    <h2>Welcome</h2>
+                </div>
+                <div class="w3l-welcome-info">
+                    <div class="col-sm-6 welcome-grids">
+                        <div class="welcome-img">
+                            <img src="./img/2.jpg" class="img-responsive zoom-img" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 welcome-grids">
+                        <div class="welcome-img">
+                            <img src="./img/3.jpg" class="img-responsive zoom-img" alt="">
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="w3l-welcome-text">
+                    <p>Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+                        maxime placeat facere possimus omnis optio cumque nihil impedit quo minus id quod maxime placeat
+                        facere possimus.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                        architecto beatae vitae </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about" id="about">
+            <div class="container">
+                <div class="w3-welcome-heading">
+                    <h3>About Us</h3>
+                </div>
+                <div class="w3-about-grids">
+                    <div class="col-md-6 w3-about-left">
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                        <p>Ut fringilla euismod sagittis. Cras semper ante sapien, in ornare nisi euismod eu. Morbi
+                            dapibus est non leo vestibulum aliquet. Sed viverra nisi pharetra, scelerisque nisi eu,
+                            tempus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                            cubilia Curae; In pellentesque, lectus at auctor luctus, lacus nibh dignissim ante, sed
+                            maximus arcu odio vitae lectus. <span>Phasellus vestibulum velit sed nisi ultricies
+                                scelerisque. Vivamus ligula mauris, euismod in dictum id, tempus ac odio. Etiam
+                                tristique felis eros, tincidunt interdum elit gravida et. Donec porttitor vehicula
+                                tortor, malesuada aliquet nibh finibus ac. Maecenas consectetur nisi ipsum, blandit
+                                finibus quam tristique vitae.</span></p>
+                        <div class="w3l-button">
+                            <a href="#" data-toggle="modal" data-target="#myModal">More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 w3-about-right">
+                        <div class="about-img-grids">
+                            <div class="col-md-7 about-img">
+                                <img src="./img/4.jpg" alt=" ">
+                            </div>
+                            <div class="col-md-5 about-img about-img1">
+                                <img src="./img/6.jpg" alt=" ">
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="about-img-grids">
+                            <div class="col-md-5 about-img about-img1">
+                                <img src="./img/7.jpg" alt=" ">
+                            </div>
+                            <div class="col-md-7 about-img">
+                                <img src="./img/5.jpg" alt=" ">
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row" id="lb">
+            <div class="w3-welcome-heading">
+                <h3>OUR SERVICES</h3>
+            </div>
+            <div class="hidden-xs" id="block">
+                <div id="carousel-example-generic" class="carousel slide blocks" data-ride="carousel">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    </ol>
+
+
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <div class="left">
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <div class="services-grid-info">
+                                            <img src="./img/s1.jpg" alt="">
+                                            <div class="services-grid-caption">
+                                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                <h4>Nulla facilisi</h4>
+                                                <p>Lorem ipsum</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <div class="services-grid-info">
+                                            <img src="./img/s2.jpg" alt="">
+                                            <div class="services-grid-caption">
+                                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                <h4>Nulla facilisi</h4>
+                                                <p>Lorem ipsum</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <div class="services-grid-info">
+                                            <img src="./img/s3.jpg" alt="">
+                                            <div class="services-grid-caption">
+                                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                <h4>Nulla facilisi</h4>
+                                                <p>Lorem ipsum</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <div class="services-grid-info">
+                                            <img src="./img/s4.jpg" alt="">
+                                            <div class="services-grid-caption">
+                                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                <h4>Nulla facilisi</h4>
+                                                <p>Lorem ipsum</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="right">
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <div class="services-grid-info">
+                                            <img src="./img/s5.jpg" alt="">
+                                            <div class="services-grid-caption">
+                                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                <h4>Nulla facilisi</h4>
+                                                <p>Lorem ipsum</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <div class="services-grid-info">
+                                            <img src="./img/s6.jpg" alt="">
+                                            <div class="services-grid-caption">
+                                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                <h4>Nulla facilisi</h4>
+                                                <p>Lorem ipsum</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <div class="services-grid-info">
+                                            <img src="./img/s7.jpg" alt="">
+                                            <div class="services-grid-caption">
+                                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                <h4>Nulla facilisi</h4>
+                                                <p>Lorem ipsum</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <div class="services-grid-info">
+                                            <img src="./img/s1.jpg" alt="">
+                                            <div class="services-grid-caption">
+                                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                <h4>Nulla facilisi</h4>
+                                                <p>Lorem ipsum</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="visible-xs" id="none"></div>
+        </div> -->
+
+        <div class="gallery" id="specials">
+            <div class="container">
+                <div class="w3-welcome-heading">
+                    <h3>Today Specials</h3>
+                </div>
+                <div class="agileinfo-gallery">
+                    <div class="col-md-3 w3-agileits-gallery-grids">
+                        <a class="w3 wow zoomIn animated" data-wow-delay=".5s" href="./img/g1.jpg"
+                            data-lightbox="example-set"
+                            data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+                            <img src="./img/g1.jpg" class="img-responsive zoom-img" alt="">
+                            <div class="agile-b-wrapper">
+                                <h5><span>$</span>12</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 w3-agileits-gallery-grids">
+                        <a class="wow zoomIn animated" data-wow-delay=".7s" href="./img/g3.jpg"
+                            data-lightbox="example-set"
+                            data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+                            <img src="./img/g3.jpg" class="img-responsive zoom-img" alt="" height="300px">
+                            <div class="agile-b-wrapper">
+                                <h5><span>$</span>20</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 w3-agileits-gallery-grids gallery-two wthree">
+                        <a class="wow zoomIn animated" data-wow-delay=".9s" href="./img/g2.jpg"
+                            data-lightbox="example-set"
+                            data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen book It has survived not only five centuries, but also remaining essentially unchanged. ">
+                            <img src="./img/g2.jpg" class="img-responsive zoom-img" alt="">
+                            <div class="agile-b-wrapper">
+                                <h5><span>$</span>09</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 w3-agileits-gallery-grids agileits-gallery-grids">
+                        <a class="wow zoomIn animated" data-wow-delay=".5s" href="./img/g4.jpg"
+                            data-lightbox="example-set"
+                            data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+                            <img src="./img/g4.jpg" class="img-responsive zoom-img" alt="">
+                            <div class="agile-b-wrapper">
+                                <h5><span>$</span>15</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 w3-agileits-gallery-grids agileits-gallery-grids">
+                        <a class="wow zoomIn animated" data-wow-delay=".7s" href="./img/g6.jpg"
+                            data-lightbox="example-set"
+                            data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+                            <img src="./img/g6.jpg" class="img-responsive zoom-img" alt="">
+                            <div class="agile-b-wrapper">
+                                <h5><span>$</span>10</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 w3-agileits-gallery-grids agileits-gallery-grids gallery-two">
+                        <a class="wow zoomIn animated" data-wow-delay=".9s" href="./img/g5.jpg"
+                            data-lightbox="example-set"
+                            data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen book It has survived not only five centuries, but also essentially unchanged. ">
+                            <img src="./img/g5.jpg" class="img-responsive zoom-img" alt="">
+                            <div class="agile-b-wrapper">
+                                <h5><span>$</span>25</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 w3-agileits-gallery-grids gallery-two w3agile-two">
+                        <a class="wow zoomIn animated" data-wow-delay=".5s" href="./img/g7.jpg"
+                            data-lightbox="example-set"
+                            data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen book It has survived not only five centuries, remaining essentially unchanged. ">
+                            <img src="./img/g7.jpg" class="img-responsive zoom-img" alt="">
+                            <div class="agile-b-wrapper">
+                                <h5><span>$</span>16</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 w3-agileits-gallery-grids">
+                        <a class="wow zoomIn animated" data-wow-delay=".7s" href="./img/g8.jpg"
+                            data-lightbox="example-set"
+                            data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+                            <img src="./img/g8.jpg" class="img-responsive zoom-img" alt="">
+                            <div class="agile-b-wrapper">
+                                <h5><span>$</span>05</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3 w3-agileits-gallery-grids">
+                        <a class="wow zoomIn animated" data-wow-delay=".9s" href="./img/g9.jpg"
+                            data-lightbox="example-set"
+                            data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+                            <img src="./img/g9.jpg" class="img-responsive zoom-img" alt="">
+                            <div class="agile-b-wrapper">
+                                <h5><span>$</span>22</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="team jarallax" id="team"
+            style="background-image: url(./img/1.jpg); background-attachment: scroll; background-size: cover; margin: 200px 0;">
+            <div id="jarallax-container-1"
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; transition: transform 0s linear -1ms; visibility: hidden; z-index: -100;">
+                <div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="w3-welcome-heading team-heading">
+                    <h3>Our Chefs</h3>
+                </div>
+                <div class="agile_team_grids">
+                    <div class="col-md-3 agile_team_grid">
+                        <div class="view w3-agile-view">
+                            <img src="./img/t1.jpg" alt=" " class="img-responsive">
+                            <div class="w3lmask">
+                                <h5>quis nostrud</h5>
+                                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 agile_team_grid">
+                        <div class="view w3-agile-view">
+                            <img src="./img/t2.jpg" alt=" " class="img-responsive">
+                            <div class="w3lmask">
+                                <h5>quis nostrud</h5>
+                                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 agile_team_grid">
+                        <div class="view w3-agile-view">
+                            <img src="./img/t3.jpg" alt=" " class="img-responsive">
+                            <div class="w3lmask">
+                                <h5>quis nostrud</h5>
+                                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 agile_team_grid">
+                        <div class="view w3-agile-view">
+                            <img src="./img/t4.jpg" alt=" " class="img-responsive">
+                            <div class="w3lmask">
+                                <h5>quis nostrud</h5>
+                                <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news" id="news" style="margin-top: 300px;">
+            <div class="container">
+                <div class="w3-welcome-heading">
+                    <h3>News &amp; Events</h3>
+                </div>
+                <div class="agile-news-grids">
+                    <div class="agile-news-grid">
+                        <div class="col-md-6 agile-news-left">
+                            <div class="col-md-6 news-left-img">
+                                <div class="news-left-text">
+                                    <h5>Delicious Food</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 news-grid-info-bottom">
+                                <div class="news-left-top-text">
+                                    <a href="#" data-toggle="modal" data-target="#myModal">Cras efficitur nunc at erat
+                                        ullamcorper blandit.</a>
+                                </div>
+                                <div class="date-grid">
+                                    <div class="admin">
+                                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
+                                    </div>
+                                    <div class="time">
+                                        <p><i class="fa fa-calendar" aria-hidden="true"></i> May 09,2016</p>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <div class="news-grid-info-bottom-text">
+                                    <p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend
+                                        neque, eget dictum lectus. Quisque eu tempor dolor.</p>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="col-md-6 agile-news-left">
+                            <div class="col-md-6 news-left-img news-left-img1" id="news-left-img1">
+                                <div class="news-left-text">
+                                    <h5>Delicious Food</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 news-grid-info-bottom">
+                                <div class="news-left-top-text">
+                                    <a href="#" data-toggle="modal" data-target="#myModal">Cras efficitur nunc at erat
+                                        ullamcorper blandit.</a>
+                                </div>
+                                <div class="date-grid">
+                                    <div class="admin">
+                                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
+                                    </div>
+                                    <div class="time">
+                                        <p><i class="fa fa-calendar" aria-hidden="true"></i> Aug 01,2016</p>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <div class="news-grid-info-bottom-text">
+                                    <p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend
+                                        neque, eget dictum lectus. Quisque eu tempor dolor.</p>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="agile-news-grid">
+                        <div class="col-md-6 agile-news-left">
+                            <div class="col-md-6 news-left-img news-left-img2">
+                                <div class="news-left-text">
+                                    <h5>Delicious Food</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 news-grid-info-bottom">
+                                <div class="news-left-top-text">
+                                    <a href="#" data-toggle="modal" data-target="#myModal">Cras efficitur nunc at erat
+                                        ullamcorper blandit.</a>
+                                </div>
+                                <div class="date-grid">
+                                    <div class="admin">
+                                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
+                                    </div>
+                                    <div class="time">
+                                        <p><i class="fa fa-calendar" aria-hidden="true"></i> Sept 24,2016</p>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <div class="news-grid-info-bottom-text">
+                                    <p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend
+                                        neque, eget dictum lectus. Quisque eu tempor dolor.</p>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="col-md-6 agile-news-left">
+                            <div class="col-md-6 news-left-img news-left-img3">
+                                <div class="news-left-text">
+                                    <h5>Delicious Food</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 news-grid-info-bottom">
+                                <div class="news-left-top-text">
+                                    <a href="#" data-toggle="modal" data-target="#myModal">Cras efficitur nunc at erat
+                                        ullamcorper blandit.</a>
+                                </div>
+                                <div class="date-grid">
+                                    <div class="admin">
+                                        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Admin</a>
+                                    </div>
+                                    <div class="time">
+                                        <p><i class="fa fa-calendar" aria-hidden="true"></i> June 17,2016</p>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <div class="news-grid-info-bottom-text">
+                                    <p>Aliquam erat volutpat. Duis vulputate tempus laoreet. Integer viverra eleifend
+                                        neque, eget dictum lectus. Quisque eu tempor dolor.</p>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial jarallax" style=" background-attachment: scroll; background-size: cover;">
+            <div id="jarallax-container-2"
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; transition: transform 0s linear -1ms; visibility: hidden; z-index: -100;">
+                <div style="background-image: url(./img/1.jpg);">
+                </div>
+            </div>
+            <div class="container">
+                <div class="agileits-w3layouts-info">
+                    <div class="testimonial-grid">
+                        <div class="slider">
+                            <div class="callbacks_container">
+                                <ul class="rslides callbacks callbacks2" id="slider4">
+                                    <li id="callbacks2_s0" class=""
+                                        style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out 0s;">
+                                        <div class="testimonial-top">
+                                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                                            <p>Donec feugiat tellus sem, laoreet iaculis orci lobortis vel. Sed sed
+                                                luctus orci, at lacinia risus. Ut porttitor ante ac tincidunt elementum.
+                                                Curabitur ex dolor, condimentum vitae nunc vel, pulvinar semper justo.
+                                                Vestibulum et aliquet magna, maximus dapibus enim. Vestibulum ex lectus,
+                                                posuere eu viverra at, mattis et enim. Nam efficitur sem et lectus
+                                                fringilla, at pharetra nulla luctus. Nunc cursus, augue ac ultricies
+                                                volutpat, neque erat congue justo, ac pretium tellus eros a neque.
+                                                Integer ipsum sem, consectetur a mollis ac, cursus eu ipsum.</p>
+                                            <h5>John Smith <span>- Founder</span></h5>
+                                        </div>
+                                    </li>
+                                    <li id="callbacks2_s1"
+                                        style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;"
+                                        class="callbacks2_on">
+                                        <div class="testimonial-top">
+                                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                                            <p>Pellentesque urna ex, ultricies a nunc at, pretium maximus nisi.
+                                                Vestibulum non auctor diam. Mauris eget consectetur mauris. Aenean leo
+                                                elit, accumsan vel elit vitae, mattis ultricies lacus. Cras consectetur
+                                                justo lorem, sed dictum sapien eleifend at.Donec sed orci a dui aliquam
+                                                tempor. Praesent in ipsum ut nunc porttitor lacinia.Donec eu sapien et
+                                                arcu dictum rutrum.Ut laoreet vitae augue at accumsan. Nam pharetra
+                                                sagittis purus et condimentum. Vestibulum cursus porttitor pretium.In
+                                                egestas finibus rutrum. Nulla facilisi.</p>
+                                            <h5>Divide Rule <span>- CEO</span></h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="mail">
+            <div class="container">
+                <div class="w3-welcome-heading">
+                    <h3>Contact Us</h3>
+                </div>
+                <div class="agile-contact-grids">
+                    <div class="col-md-2 agile-contact-right"></div>
+                    <div class="col-md-8 agile-contact-left">
+                        <div class="address-grid">
+                            <h4>Our Address</h4>
+                            <ul class="w3_address">
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block,
+                                    <span>New York City.</span></li>
+                                <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a
+                                        href="mailto:info@example.com">info@example.com</a></li>
+                                <li><i class="fa fa-mobile" aria-hidden="true"></i>+1234 567 567</li>
+                            </ul>
+                        </div>
+                        <div class="contact-form">
+                            <h4>Contact Form</h4>
+                            <form action="#" method="post">
+                                <div class="styled-input agile-styled-input-top">
+                                    <input type="text" name="Name" required="">
+                                    <label>Name</label>
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    <input type="email" name="Email" required="">
+                                    <label>Email</label>
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    <input type="text" name="Subject" required="">
+                                    <label>Subject</label>
+                                    <span></span>
+                                </div>
+                                <div class="styled-input">
+                                    <textarea name="Message" required=""></textarea>
+                                    <label>Message</label>
+                                    <span></span>
+                                </div>
+                                <input type="submit" value="SEND">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- <script src="./ct.js"></script> -->
+</body>
+
+</html>

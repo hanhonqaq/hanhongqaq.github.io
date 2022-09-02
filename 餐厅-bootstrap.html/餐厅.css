@@ -1,0 +1,90 @@
+.box .hand {
+  width: 100%;
+  height: 660px;
+  background-image: url(img/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 30px;
+}
+.box .hand .title {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  margin: 0 auto;
+  width: 400px;
+  padding: 10px 0;
+  border: 5px solid white;
+}
+.box .hand .title span {
+  font-size: 30px;
+  font-weight: lighter;
+  color: red;
+}
+.box .hand #myModal h4 {
+  font-size: 2em;
+  font-weight: bolder;
+}
+.box .hand #myModal h4 span {
+  font-size: 1em;
+  font-weight: lighter;
+  color: red;
+}
+.box .hand #myModal h4 p {
+  margin: 10px 0 0 0;
+  font-size: 20px;
+}
+.box .hand #carousel-example-generic {
+  height: 450px;
+  margin: 0 auto;
+  position: relative;
+}
+.box .hand #carousel-example-generic .item {
+  height: 350px;
+  transition: all 0.3s;
+}
+.box .hand #carousel-example-generic .item h5 {
+  font-size: 6em;
+  color: white;
+}
+.box .hand #carousel-example-generic .item p {
+  color: white;
+  margin: 1em 0 0 0;
+}
+.box .hand #carousel-example-generic .item button {
+  background-color: red;
+  margin: 2em 0 0 0;
+}
+.box #lb {
+  width: 100%;
+  margin: 30px 0;
+  padding: 30px 0;
+  margin: 0;
+}
+.box #lb .w3-welcome-heading {
+  margin: 30px 0;
+}
+.box #lb #block {
+  width: 100%;
+  height: 250px;
+}
+.box #lb #block .carousel.slide.blocks .left {
+  width: 25%;
+  max-height: 300px;
+  display: flex;
+}
+.box #lb #block .carousel.slide.blocks .left .owl-item {
+  width: 25%;
+  max-height: 300px;
+  height: 100%;
+}
+.box #lb #block .carousel.slide.blocks .right {
+  display: flex;
+}
+.box #lb #none {
+  width: 100px;
+  height: 100px;
+  background-color: lightgreen;
+}
+/*# sourceMappingURL=./餐厅.css.map */
