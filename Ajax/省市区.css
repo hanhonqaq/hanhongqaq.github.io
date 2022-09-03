@@ -1,0 +1,71 @@
+.sheng {
+  text-align: center;
+}
+.sheng h3 {
+  width: 150px;
+  height: 40px;
+  background: lightgreen;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.sheng ul {
+  text-align: center;
+}
+.sheng ul li {
+  margin: 10px;
+  padding: 10px;
+  background-color: lightcoral;
+  border-radius: 10px;
+}
+.shi {
+  text-align: center;
+}
+.shi h3 {
+  width: 150px;
+  height: 40px;
+  background: lightgreen;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.shi ul {
+  text-align: center;
+}
+.shi ul li {
+  margin: 10px;
+  padding: 10px;
+  background-color: lightcoral;
+  border-radius: 10px;
+}
+.qu {
+  text-align: center;
+}
+.qu h3 {
+  width: 150px;
+  height: 40px;
+  background: lightgreen;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.qu ul {
+  text-align: center;
+}
+.qu ul li {
+  margin: 10px;
+  padding: 10px;
+  background-color: lightcoral;
+  border-radius: 10px;
+}
+h3 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+/*# sourceMappingURL=./省市区.css.map */

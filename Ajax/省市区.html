@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./my-minireset.css">
+    <link rel="stylesheet" href="./省市区.css">
+</head>
+
+<body>
+    <style>
+        li.active {
+            color: red;
+        }
+
+        section {
+            display: flex;
+        }
+    </style>
+    <section>
+        <div class="sheng">
+            <h3 class="provs">省</h3>
+            <ul class="prov"></ul>
+        </div>
+        <div class="shi">
+            <h3>市</h3>
+            <ul class="city"></ul>
+        </div>
+        <div class="qu">
+            <h3>区</h3>
+            <ul class="county"></ul>
+        </div>
+    </section>
+    <script>
+        var provs = [];
+        var cities = [];
+        var couonties = [];
+
+        $.get("./8d930a4a40da18311a5baa0ad3189f51_1_8.json", function (res) {
+
+            var arr = res.map(function (o) {
+                return o.split(":");
+            });
+
+            arr.forEach(function (item) {
+                switch (item[0].length) {
+                    case 2:
+                        provs.push({
+                            text: item[1],
+                            code: item[0]
+                        });
+                        break;
+                    case 4:
+                        cities.push({
+                            text: item[1],
+                            code: item[0]
+                        });
+                        break;
+                    case 6:
+                        couonties.push({
+                            text: item[1],
+                            code: item[0]
+                        });
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            provs.sort(function (a, b) {
+                return a.code - b.code;
+            });
+            cities.sort(function (a, b) {
+                return a.code - b.code;
+            });
+            couonties.sort(function (a, b) {
+                return a.code - b.code;
+            });
+
+            provs.forEach(function (prov) {
+                $(".prov").append('<li data-id="' + prov.code + '">' + prov.text + "</li>");
+            });
+            $('.prov').hide();
+            $('.provs').click(function () {
+                $('.prov').toggle();
+                $('.city').html('')
+                $('.county').html('');
+            })
+
+            $(".prov").on("click", "li", function () {
+
+                $(this).addClass("active").siblings().removeClass("active");
+
+                var provCode = $(this).data("id");
+
+                var currentCities = cities.filter(function (city) {
+                    return city.code.slice(0, 2) == provCode;
+                });
+
+                $(".city").html("");
+                $(".county").html("");
+                currentCities.forEach(function (city) {
+                    $(".city").append('<li data-id="' + city.code + '">' + city.text + "</li>");
+                });
+            });
+
+            $(".city").on("click", "li", function () {
+
+                $(this).addClass("active").siblings().removeClass("active");
+
+                var cityCode = $(this).data("id");
+                var currentCounties = couonties.filter(function (couonty) {
+                    return couonty.code.slice(0, 4) == cityCode;
+                });
+                $(".county").html("");
+                currentCounties.forEach(function (county) {
+                    $(".county").append('<li data-id="' + county.code + '">' + county.text +
+                        "</li>");
+                });
+            });
+        });
+
+        var county = document.querySelector('.county')
+        county.addEventListener('click', function (e) {
+            $(e.target).addClass('active').siblings().removeClass('active');
+        })
+    </script>
+</body>
+
+</html>
