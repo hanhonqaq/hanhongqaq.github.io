@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./360.css">
+    <link rel="stylesheet" href="./滚动.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"> -->
+
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: white;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            /* text-align: center; */
+            font-size: 18px;
+            /* background: #fff; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="left">
+                <img src="./logo.png" alt="">
+            </div>
+            <div class="right">
+                <a href="https://bbs.360.cn/forum-142-1.html" target="_blank">论坛</a>
+                <a href="https://ext.chrome.360.cn/webstore" target="_blank">扩展</a>
+                <a href="https://browser.360.cn/ee/mac/index.html" target="_blank">Mac版</a>
+            </div>
+        </div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="content">
+                    <h2>畅快浏览 极致体验</h2>
+                    <p>全新Chrome内核浏览器，性能更强，速度更快</p>
+                    <span class="versions">
+                        <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe" id="down32">32位版本</a>
+                        <a href="https://down.360safe.com/cse/360csex_setup.exe" id="down64"><img
+                                src="./window-logo.png" alt="">64位版本<p>NEW</p></a>
+                    </span>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="wrap">
+                    <video src="https://s2.ssl.qhres2.com/static/dfeefadde568eab0.mp4" autoplay loop muted></video>
+                    <div class="content">
+                        <p>极速</p>
+                        <div class="line"></div>
+                        <p class="mium">全新Chromium内核</p>
+                        <p class="xingneng">性能强劲，快如闪电。</p>
+                        <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="wrap">
+                    <video src="https://s3.ssl.qhres2.com/static/9bebcedf292f327e.mp4" autoplay loop muted></video>
+                    <div class="content">
+                        <p>极酷</p>
+                        <div class="line"></div>
+                        <p class="mium">暗夜炫黑模式</p>
+                        <p class="xingneng">定义酷，定义你。</p>
+                        <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="wrap">
+                    <video src="https://s1.ssl.qhres2.com/static/fdf92889c539303c.mp4" autoplay loop muted></video>
+                    <div class="content">
+                        <p>极安全</p>
+                        <div class="line"></div>
+                        <p class="mium">DNS加密防劫持</p>
+                        <p class="xingneng">安全升级，肆意无忌。</p>
+                        <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="wrap">
+                    <video src="https://s1.ssl.qhres2.com/static/7e7f0ec4a0cc7a66.mp4" autoplay loop muted></video>
+                    <div class="content">
+                        <p>极视界</p>
+                        <div class="line"></div>
+                        <p class="mium">4K高清视频播放</p>
+                        <p class="xingneng">还原真实之美 ，尽显万物本色。</p>
+                        <a href="https://down.360safe.com/cse/360cse_13.5.2022.0.exe"></a>
+                    </div>
+                    <div class="footer">
+                        <div class="text">
+                            <p>Copyright © 2005-2022 360.CN All Rights Reserved 360互联网安全中心 隐私政策
+                                京ICP证080047号[京ICP备08010314号-6]</p>
+                            <p>网站举报电话：4006693600 举报邮箱：kefu@360.cn 互联网违法和不良信息举报中心：https://www.12377.cn</p>
+                            <p><img src="https://se1.360simg.com/t01d8eda6e551cf2615.png" alt=""> 京公网安备 11000002000006号
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 30,
+            speed: 1000,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            on: {
+                slideChangeTransitionEnd: function () {
+                    // alert(this.activeIndex); //切换结束时，告诉我现在是第几个slide
+                    $(".content").eq(this.activeIndex).css({
+                        opacity: 1,
+                        transition: "all .5s"
+                    })
+                },
+            },
+        });
+    </script>
+
+    <script>
+        var content = document.querySelectorAll(".content");
+        var span = document.querySelectorAll(".swiper-pagination-bullet");
+
+        window.onload = function () {
+            setTimeout(function () {
+                content[0].style.opacity = "1";
+            }, 300);
+        };
+    </script>
+</body>
+
+</html>
