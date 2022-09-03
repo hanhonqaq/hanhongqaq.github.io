@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <title>Document</title>
+    <link rel="stylesheet" href="./b站.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            /* width: 1200px; */
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul>li {
+            margin: 10px 20px;
+            /* width: 100px; */
+            cursor: pointer;
+        }
+
+        li.active {
+            color: rgb(30, 148, 187);
+        }
+
+        .contain {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-around;
+        }
+
+        .contain div {
+            width: 200px;
+
+            height: 300px;
+
+            margin: 10px;
+        }
+
+        .contain div p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .contain div img {
+            width: 100%;
+            height: 80%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <div class="head">
+            <ul class="one">题材</ul>
+            <ul class="two">地区</ul>
+            <ul class="three">进度</ul>
+            <ul class="four">收费</ul>
+            <ul class="five">排序</ul>
+        </div>
+    </div>
+    <div class="contain"></div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // 1096历史 1092 武侠仙侠  1088 游戏竞技  1081 悬疑灵异 1063 架空 1060 青春 1054 西幻 1048 现代 1028 正能量 1015 科幻
+        var style = [{
+                '-1': '全部'
+            }, {
+                999: '热血'
+            }, {
+                997: '古风'
+            }, {
+                1016: '玄幻'
+            }, {
+                998: '奇幻'
+            },
+            {
+                1023: '悬疑'
+            }, {
+                1002: '都市'
+            }, {
+                1096: '历史'
+            }, {
+                1092: '武侠仙侠'
+            }, {
+                1088: '游戏竞技'
+            },
+            {
+                1081: '悬疑灵异'
+            }, {
+                1063: '架空'
+            }, {
+                1060: '青春'
+            }, {
+                1054: '西幻'
+            }, {
+                1048: '现代'
+            }, {
+                1028: '正能量'
+            }, {
+                1015: '科幻'
+            }
+        ]
+        // -1全部  1大陆  2日本  6韩国  5其他
+        var area = [{
+            '-1': '全部'
+        }, {
+            1: '大陆'
+        }, {
+            2: '日本'
+        }, {
+            6: '韩国'
+        }, {
+            5: '其他'
+        }]
+        var isFinish = [{
+            '-1': '全部'
+        }, {
+            0: '连载'
+        }, {
+            1: '完结'
+        }]
+        // isFree 收费id           number -1全部  1免费  2付费   3等就免费
+        var isFree = [{
+            '-1': '全部'
+        }, {
+            1: '免费'
+        }, {
+            2: '付费'
+        }, {
+            3: '等就免费'
+        }]
+        // order  排序              number 0人气推荐 1更新时间 2追漫人数  3上架时间
+        var order = [{
+            0: '人气推荐 '
+        }, {
+            1: '更新时间'
+        }, {
+            2: '追漫人数'
+        }, {
+            3: '上架时间'
+        }]
+
+        create(style, ".one")
+        create(area, '.two')
+        create(isFinish, '.three')
+        create(isFree, '.four')
+        create(order, '.five')
+
+        function create(arr, dom) {
+            arr.forEach(function (value, index, arr) {
+                for (i in value) {
+                    // console.log(value[i]);
+                    var node = document.createElement('li')
+                    node.innerText = value[i]
+                    node.id = parseInt(i)
+                    document.querySelector(dom).appendChild(node)
+                }
+            })
+        }
+
+        var one = document.querySelector('ul.one')
+
+        function qsAllclassActive() {
+            var arrs = document.querySelectorAll('.active')
+            // console.log(arrs);
+            arrs.forEach(function (value) {
+                // console.log(value.id);
+            })
+            return arrs
+        }
+
+
+        function getData() {
+            var arrs = qsAllclassActive()
+
+            $.get('https://apis.netstart.cn/bcomic/ClassPage?styleId=' + arrs[0].id + '&areaId=' + arrs[1].id +
+                '&isFinish=' + arrs[2].id + '&order=' + arrs[4].id + '&pageNum=1&pageSize=39&isFree=' + arrs[3].id +
+                '',
+                function (res) {
+
+                    var dataArr = res.data
+                    console.log(dataArr);
+
+                    var container = document.querySelector('.contain')
+
+                    for (var i = 0; i < dataArr.length; i++) {
+                        var div = document.createElement('div')
+                        var img = document.createElement('img')
+                        var p = document.createElement('p')
+                        var span = document.createElement('span')
+                        p.innerText = dataArr[i].title
+                        span.innerText = '更新至' + dataArr[i].last_ord + '话'
+                        img.src = dataArr[i].horizontal_cover
+                        div.appendChild(img)
+                        div.appendChild(p)
+                        div.appendChild(span)
+                        container.appendChild(div)
+
+                    }
+                })
+
+        }
+
+        var uls = document.querySelectorAll('ul')
+        uls.forEach(function (value) {
+            value.firstElementChild.classList.add('active')
+            value.addEventListener('click', function (e) {
+                if (e.target.nodeName != 'LI') {
+
+                    console.log(e.target.nodeName);
+                } else {
+                    $('.contain').empty()
+                    $(e.target).addClass('active').siblings().removeClass()
+                    getData()
+                }
+
+
+            })
+
+        })
+        getData()
+    </script>
+</body>
+
+</html>
