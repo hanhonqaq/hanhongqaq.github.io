@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 强制ie浏览器使用 最新edge渲染引擎-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- 响应式网页必须 -->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./商城.css">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="side">
+        <div class="logo">订货汇</div>
+        <div class="sidemenu">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="ico i-nav1"></i>
+                        <p>客户</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ico i-nav2"></i>
+                        <p>销售单</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ico i-nav3"></i>
+                        <p>商家</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ico i-nav4"></i>
+                        <p>采购单</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ico i-nav5"></i>
+                        <p>商品库</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ico i-nav6"></i>
+                        <p>资金</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ico i-nav7"></i>
+                        <p>设置</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ico i-nav8"></i>
+                        <p>报表</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header clear">
+        <div class="date-cont1 left">
+            <span class="time">10:36</span>
+            <p class="date">2022-09-02</p>
+        </div>
+        <!-- <div class="date-cont2 left">
+			<i class="ico i-date left"></i>
+			<div class="left txt">
+				<span class="daily">26</span><br>2022-08
+			</div>
+		</div> -->
+
+        <div class="dropdown right head-dropdown">
+            <a href="javascript:;" class="under-n head-droplink" id="dropdownMenu1" data-toggle="dropdown">
+                <span class="avtar"><img src="./img/avtar.jpg"></span>
+                Nick
+                <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <span class="fa fa-angle-up"></span>
+                <li class="line"><a href="#">账号管理</a></li>
+                <li><a href="#">反馈意见</a></li>
+                <li><a href="#">退出系统</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown right head-dropdown">
+            <a href="javascript:;" class="under-n head-droplink" id="dropdownMenu1" data-toggle="dropdown">
+                <i class="fa fa-bell-o head-ico"><span class="badge">4</span></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <span class="fa fa-angle-up"></span>
+                <li class="line"><a href="#">账号管理</a></li>
+                <li><a href="#">反馈意见</a></li>
+                <li><a href="#">退出系统</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header clear">
+        <div class="date-cont1 left">
+            <span class="time">17:36</span>
+            <p class="date">2022-09-02</p>
+        </div>
+        <!-- <div class="date-cont2 left">
+			<i class="ico i-date left"></i>
+			<div class="left txt">
+				<span class="daily">26</span><br>2022-08
+			</div>
+		</div> -->
+
+        <div class="dropdown right head-dropdown">
+            <a href="javascript:;" class="under-n head-droplink" id="dropdownMenu1" data-toggle="dropdown">
+                <span class="avtar"><img src="./img/avtar.jpg"></span>
+                Nick
+                <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <span class="fa fa-angle-up"></span>
+                <li class="line"><a href="#">账号管理</a></li>
+                <li><a href="#">反馈意见</a></li>
+                <li><a href="#">退出系统</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown right head-dropdown">
+            <a href="javascript:;" class="under-n head-droplink" id="dropdownMenu1" data-toggle="dropdown">
+                <i class="fa fa-bell-o head-ico"><span class="badge">4</span></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <span class="fa fa-angle-up"></span>
+                <li class="line"><a href="#">账号管理</a></li>
+                <li><a href="#">反馈意见</a></li>
+                <li><a href="#">退出系统</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="pad20">
+            <!--postion start-->
+            <div class="postion ">
+                <div class="pos-txt"><span class="fz24 padr5">当前位置</span>Current position</div>
+                <div class="pos-link mart20"><a href="/">首页</a> &gt; <a href="#">账单</a></div>
+            </div>
+            <!--postion end-->
+            <!--stats start-->
+            <div class="stats-cont row mart20">
+                <div class="col-sm-3 ">
+                    <div class="stats-panel stats-blue clear">
+                        <div class="left"><img src="./img/stats1.png" height="104" width="83" alt=""></div>
+                        <div class="auto stats-txt">
+                            <p>待处理订单</p>
+                            <p class="stats-num"><a href="#">2608</a></p>
+                        </div>
+                        <a href="#" class="more clear"><span class="left">More</span> <i
+                                class="right fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="stats-panel stats-red clear">
+                        <div class="left"><img src="./img/stats2.png" height="104" width="83" alt=""></div>
+                        <div class="auto stats-txt">
+                            <p>待回复消息</p>
+                            <p class="stats-num"><a href="#">2608</a></p>
+                        </div>
+                        <a href="#" class="more clear"><span class="left">More</span> <i
+                                class="right fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="stats-panel stats-green clear">
+                        <div class="left"><img src="./img/stats3.png" height="104" width="83" alt=""></div>
+                        <div class="auto stats-txt">
+                            <p>待补充商品</p>
+                            <p class="stats-num"><a href="#">2608</a></p>
+                        </div>
+                        <a href="#" class="more clear"><span class="left">More</span> <i
+                                class="right fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="stats-panel stats-purple clear">
+                        <div class="left"><img src="./img/stats4.png" height="104" width="83" alt=""></div>
+                        <div class="auto stats-txt">
+                            <p>待处理订单</p>
+                            <p class="stats-num"><a href="#">2608</a></p>
+                        </div>
+                        <a href="#" class="more clear"><span class="left">More</span> <i
+                                class="right fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!--stats end-->
+            <!--chart start-->
+            <div class="chart mart20">
+                <div class="tit1 clear">
+                    <span class="left txt-left txt-red"><i class="fa fa-share-alt"></i>业绩分析</span>
+                    <div class="right chart-tit-date">
+                        <a href="#" class="active">月</a>
+                        <a href="#">年</a>
+                    </div>
+                </div>
+
+                <div class="padt10">
+                    <div class="chart-tag"><a href="#" class="active">订单金额</a><a href="#">订单毛利</a></div>
+                    <div class="chart-box padt10">
+                        <div id="chart-container" class="chart-container" data-highcharts-chart="0">
+                            <div class="highcharts-container" id="highcharts-0"
+                                style="position: relative; overflow: hidden; width: 791px; height: 260px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+                                <svg version="1.1"
+                                    style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;"
+                                    xmlns="#" width="791" height="260">
+                                    <desc>Created with Highcharts 4.1.8</desc>
+                                    <defs>
+                                        <clipPath id="highcharts-1">
+                                            <rect x="0" y="0" width="700" height="195"></rect>
+                                        </clipPath>
+                                    </defs>
+                                    <rect x="0" y="0" width="791" height="260" strokeWidth="0" fill="#FFFFFF"
+                                        class=" highcharts-background"></rect>
+                                    <g class="highcharts-grid" zIndex="1"></g>
+                                    <g class="highcharts-grid" zIndex="1">
+                                        <path fill="none" d="M 81 205.5 L 781 205.5" stroke="#D8D8D8" stroke-width="1"
+                                            zIndex="1" opacity="1"></path>
+                                        <path fill="none" d="M 81 140.5 L 781 140.5" stroke="#D8D8D8" stroke-width="1"
+                                            zIndex="1" opacity="1"></path>
+                                        <path fill="none" d="M 81 75.5 L 781 75.5" stroke="#D8D8D8" stroke-width="1"
+                                            zIndex="1" opacity="1"></path>
+                                        <path fill="none" d="M 81 9.5 L 781 9.5" stroke="#D8D8D8" stroke-width="1"
+                                            zIndex="1" opacity="1"></path>
+                                    </g>
+                                    <g class="highcharts-axis" zIndex="2">
+                                        <path fill="none" d="M 138.5 205 L 138.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 197.5 205 L 197.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 255.5 205 L 255.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 313.5 205 L 313.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 372.5 205 L 372.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 430.5 205 L 430.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 488.5 205 L 488.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 547.5 205 L 547.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 605.5 205 L 605.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 663.5 205 L 663.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 722.5 205 L 722.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 781.5 205 L 781.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 80.5 205 L 80.5 215" stroke="#C0D0E0" stroke-width="1"
+                                            opacity="1"></path>
+                                        <path fill="none" d="M 81 205.5 L 781 205.5" stroke="#C0D0E0" stroke-width="1"
+                                            zIndex="7" visibility="visible"></path>
+                                    </g>
+                                    <g class="highcharts-axis" zIndex="2"><text x="27.933300018310547" zIndex="7"
+                                            text-anchor="middle"
+                                            transform="translate(0,0) rotate(270 27.933300018310547 107.5)"
+                                            class=" highcharts-yaxis-title" style="color:#707070;fill:#707070;"
+                                            visibility="visible" y="107.5">Y-Axis</text></g>
+                                    <g class="highcharts-series-group" zIndex="3">
+                                        <path fill="rgba(124,181,236,0.25)" d="M 0 0"></path>
+                                        <g class="highcharts-series" visibility="visible" zIndex="0.1"
+                                            transform="translate(81,10) scale(1 1)" clip-path="url(#highcharts-1)">
+                                            <path fill="rgba(124,181,236,0.5)"
+                                                d="M 29.166666666666668 143 L 87.5 85.80000000000001 L 145.83333333333334 116.74000000000001 L 204.16666666666666 163.8 L 262.5 65 L 320.83333333333337 106.60000000000001 L 379.1666666666667 113.88000000000001 L 437.50000000000006 13 L 495.83333333333337 106.60000000000001 L 554.1666666666666 113.88000000000001 L 612.5 143 L 670.8333333333334 13 L 670.8333333333334 195 L 29.166666666666668 195"
+                                                zIndex="0"></path>
+                                            <path fill="none"
+                                                d="M 29.166666666666668 143 L 87.5 85.80000000000001 L 145.83333333333334 116.74000000000001 L 204.16666666666666 163.8 L 262.5 65 L 320.83333333333337 106.60000000000001 L 379.1666666666667 113.88000000000001 L 437.50000000000006 13 L 495.83333333333337 106.60000000000001 L 554.1666666666666 113.88000000000001 L 612.5 143 L 670.8333333333334 13"
+                                                stroke="#7cb5ec" stroke-width="2" zIndex="1" stroke-linejoin="round"
+                                                stroke-linecap="round"></path>
+                                            <path fill="none"
+                                                d="M 19.166666666666668 143 L 29.166666666666668 143 L 87.5 85.80000000000001 L 145.83333333333334 116.74000000000001 L 204.16666666666666 163.8 L 262.5 65 L 320.83333333333337 106.60000000000001 L 379.1666666666667 113.88000000000001 L 437.50000000000006 13 L 495.83333333333337 106.60000000000001 L 554.1666666666666 113.88000000000001 L 612.5 143 L 670.8333333333334 13 L 680.8333333333334 13"
+                                                stroke-linejoin="round" visibility="visible"
+                                                stroke="rgba(192,192,192,0.0001)" stroke-width="22" zIndex="2"
+                                                class=" highcharts-tracker" style=""></path>
+                                        </g>
+                                        <g class="highcharts-markers highcharts-tracker" visibility="visible"
+                                            zIndex="0.1" transform="translate(81,10) scale(1 1)"
+                                            clip-path="url(#highcharts-2)" style="">
+                                            <path fill="#7cb5ec"
+                                                d="M 670 9 C 675.328 9 675.328 17 670 17 C 664.672 17 664.672 9 670 9 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 612 139 C 617.328 139 617.328 147 612 147 C 606.672 147 606.672 139 612 139 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 554 109.88000000000001 C 559.328 109.88000000000001 559.328 117.88000000000001 554 117.88000000000001 C 548.672 117.88000000000001 548.672 109.88000000000001 554 109.88000000000001 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 495 102.60000000000001 C 500.328 102.60000000000001 500.328 110.60000000000001 495 110.60000000000001 C 489.672 110.60000000000001 489.672 102.60000000000001 495 102.60000000000001 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 437 9 C 442.328 9 442.328 17 437 17 C 431.672 17 431.672 9 437 9 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 379 109.88000000000001 C 384.328 109.88000000000001 384.328 117.88000000000001 379 117.88000000000001 C 373.672 117.88000000000001 373.672 109.88000000000001 379 109.88000000000001 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 320 102.60000000000001 C 325.328 102.60000000000001 325.328 110.60000000000001 320 110.60000000000001 C 314.672 110.60000000000001 314.672 102.60000000000001 320 102.60000000000001 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 262 61 C 267.328 61 267.328 69 262 69 C 256.672 69 256.672 61 262 61 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 204 159.8 C 209.328 159.8 209.328 167.8 204 167.8 C 198.672 167.8 198.672 159.8 204 159.8 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 145 112.74000000000001 C 150.328 112.74000000000001 150.328 120.74000000000001 145 120.74000000000001 C 139.672 120.74000000000001 139.672 112.74000000000001 145 112.74000000000001 Z">
+                                            </path>
+                                            <path fill="#7cb5ec"
+                                                d="M 87 81.80000000000001 C 92.328 81.80000000000001 92.328 89.80000000000001 87 89.80000000000001 C 81.672 89.80000000000001 81.672 81.80000000000001 87 81.80000000000001 Z"
+                                                stroke-width="1"></path>
+                                            <path fill="#7cb5ec"
+                                                d="M 29 139 C 34.328 139 34.328 147 29 147 C 23.672 147 23.672 139 29 139 Z"
+                                                stroke-width="1"></path>
+                                        </g>
+                                    </g>
+                                    <g class="highcharts-legend" zIndex="7" transform="translate(160,110)">
+                                        <rect x="0.5" y="0.5" width="64" height="28" strokeWidth="1" stroke="#909090"
+                                            stroke-width="1" fill="#FFFFFF" visibility="visible"></rect>
+                                        <g zIndex="1">
+                                            <g>
+                                                <g class="highcharts-legend-item" zIndex="1" transform="translate(8,3)">
+                                                    <text x="21"
+                                                        style="color:#333333;font-size:12px;font-weight:bold;cursor:pointer;fill:#333333;"
+                                                        text-anchor="start" zIndex="2" y="15">John</text>
+                                                    <rect x="0" y="4" width="16" height="12" zIndex="3" fill="#7cb5ec">
+                                                    </rect>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g class="highcharts-axis-labels highcharts-xaxis-labels" zIndex="7"><text
+                                            x="110.16666666666667"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>1月</tspan>
+                                        </text><text x="168.50000000000003"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>2月</tspan>
+                                        </text><text x="226.83333333333334"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>3月</tspan>
+                                        </text><text x="285.1666666666667"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>4月</tspan>
+                                        </text><text x="343.5"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>5月</tspan>
+                                        </text><text x="401.83333333333337"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>6月</tspan>
+                                        </text><text x="460.1666666666667"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>7月</tspan>
+                                        </text><text x="518.5000000000001"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>8月</tspan>
+                                        </text><text x="576.8333333333334"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>9月</tspan>
+                                        </text><text x="635.1666666666667"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>10月</tspan>
+                                        </text><text x="693.5"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>11月</tspan>
+                                        </text><text x="751.8333333333334"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:58.333333333333336;text-overflow:ellipsis;"
+                                            text-anchor="middle" transform="translate(0,0)" y="225" opacity="1">
+                                            <tspan>12月</tspan>
+                                        </text></g>
+                                    <g class="highcharts-axis-labels highcharts-yaxis-labels" zIndex="7"><text x="66"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:251px;text-overflow:clip;"
+                                            text-anchor="end" transform="translate(0,0)" y="209"
+                                            opacity="1">0</text><text x="66"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:251px;text-overflow:clip;"
+                                            text-anchor="end" transform="translate(0,0)" y="144"
+                                            opacity="1">2500</text><text x="66"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:251px;text-overflow:clip;"
+                                            text-anchor="end" transform="translate(0,0)" y="79"
+                                            opacity="1">5000</text><text x="66"
+                                            style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:251px;text-overflow:clip;"
+                                            text-anchor="end" transform="translate(0,0)" y="14" opacity="1">7500</text>
+                                    </g>
+                                    <g class="highcharts-tooltip" zIndex="8"
+                                        style="cursor:default;padding:0;white-space:nowrap;"
+                                        transform="translate(251,-9999)" opacity="0" visibility="visible">
+                                        <path fill="none"
+                                            d="M 3.5 0.5 L 73.5 0.5 C 76.5 0.5 76.5 0.5 76.5 3.5 L 76.5 46.5 C 76.5 49.5 76.5 49.5 73.5 49.5 L 43.5 49.5 37.5 55.5 31.5 49.5 3.5 49.5 C 0.5 49.5 0.5 49.5 0.5 46.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                                            isShadow="true" stroke="black" stroke-opacity="0.049999999999999996"
+                                            stroke-width="5" transform="translate(1, 1)" width="76" height="49"></path>
+                                        <path fill="none"
+                                            d="M 3.5 0.5 L 73.5 0.5 C 76.5 0.5 76.5 0.5 76.5 3.5 L 76.5 46.5 C 76.5 49.5 76.5 49.5 73.5 49.5 L 43.5 49.5 37.5 55.5 31.5 49.5 3.5 49.5 C 0.5 49.5 0.5 49.5 0.5 46.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                                            isShadow="true" stroke="black" stroke-opacity="0.09999999999999999"
+                                            stroke-width="3" transform="translate(1, 1)" width="76" height="49"></path>
+                                        <path fill="none"
+                                            d="M 3.5 0.5 L 73.5 0.5 C 76.5 0.5 76.5 0.5 76.5 3.5 L 76.5 46.5 C 76.5 49.5 76.5 49.5 73.5 49.5 L 43.5 49.5 37.5 55.5 31.5 49.5 3.5 49.5 C 0.5 49.5 0.5 49.5 0.5 46.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                                            isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1"
+                                            transform="translate(1, 1)" width="76" height="49"></path>
+                                        <path fill="rgba(249, 249, 249, .85)"
+                                            d="M 3.5 0.5 L 73.5 0.5 C 76.5 0.5 76.5 0.5 76.5 3.5 L 76.5 46.5 C 76.5 49.5 76.5 49.5 73.5 49.5 L 43.5 49.5 37.5 55.5 31.5 49.5 3.5 49.5 C 0.5 49.5 0.5 49.5 0.5 46.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                                            stroke="#7cb5ec" stroke-width="1"></path><text x="8" zIndex="1"
+                                            style="font-size:12px;color:#333333;fill:#333333;" y="20">
+                                            <tspan style="font-weight:bold">John</tspan>
+                                            <tspan x="8" dy="15">2月: 4200</tspan>
+                                        </text>
+                                    </g>
+                                </svg></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--chart end-->
+            <!--sales-list start-->
+            <div class="sales-list row mart20">
+                <div class="col-sm-9">
+                    <div class="pad20 bgf">
+                        <div class="tit1 clear">
+                            <span class="left txt-left txt-blue"><i class="ico i-rank"></i>销售榜单</span>
+                            <div class="right ">
+                                <a href="#">今日排行 <i class="fa fa-angle-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs sale-tabs" role="tablist">
+                                <li class="active"><a href="#tab1" role="tab" data-toggle="tab">产品销售</a></li>
+                                <li><a href="#tab2" role="tab" data-toggle="tab">客户购买</a></li>
+                                <li><a href="#tab3" role="tab" data-toggle="tab">地区购买</a></li>
+                                <li><a href="#tab4" role="tab" data-toggle="tab">供应商商品</a></li>
+                                <li><a href="#tab5" role="tab" data-toggle="tab">业务员</a></li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="tab1">
+                                    <div class="table-responsive mart20 sale-table">
+                                        <table class="table table-bordered table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="10%">排名</td>
+                                                    <td width="30%">商品名称</td>
+                                                    <td width="15%">单价</td>
+                                                    <td width="15%">数量</td>
+                                                    <td width="20%">销售额</td>
+                                                    <td>操作</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top1</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top2</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top3</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top4</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top5</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top6</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top7</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top8</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top9</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top10</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--tab2-->
+                                <div role="tabpanel" class="tab-pane" id="tab2">
+                                    <div class="table-responsive mart20 sale-table">
+                                        <table class="table table-bordered table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="10%">排名</td>
+                                                    <td width="30%">客户名称</td>
+                                                    <td width="25%">订单数量</td>
+                                                    <td width="25%">销售额</td>
+                                                    <td>操作</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top1</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top2</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top3</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top4</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top5</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top6</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top7</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top8</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top9</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top10</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--tab3-->
+                                <div role="tabpanel" class="tab-pane" id="tab3">
+                                    <div class="table-responsive mart20 sale-table">
+                                        <table class="table table-bordered table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="10%">排名</td>
+                                                    <td width="30%">地区名称</td>
+                                                    <td width="25%">订单数量</td>
+                                                    <td width="25%">销售额</td>
+                                                    <td>操作</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top1</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top2</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top3</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top4</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top5</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top6</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top7</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top8</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top9</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top10</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--tab4-->
+                                <div role="tabpanel" class="tab-pane" id="tab4">
+                                    <div class="table-responsive mart20 sale-table">
+                                        <table class="table table-bordered table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="10%">排名</td>
+                                                    <td width="30%">供应商名称</td>
+                                                    <td width="15%">类别</td>
+                                                    <td width="15%">销量</td>
+                                                    <td width="20%">销售额</td>
+                                                    <td>操作</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top1</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top2</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top3</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top4</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top5</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top6</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top7</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top8</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top9</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top10</span></td>
+                                                    <td><a href="#">2022新款男装</a></td>
+                                                    <td>150.00</td>
+                                                    <td>3000</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--tab5-->
+                                <div role="tabpanel" class="tab-pane" id="tab5">
+                                    <div class="table-responsive mart20 sale-table">
+                                        <table class="table table-bordered table-striped">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="10%">排名</td>
+                                                    <td width="50%">业务员名称</td>
+                                                    <td width="30%">销售额</td>
+                                                    <td>操作</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top1</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top2</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="txt-red">Top3</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top4</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top5</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top6</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top7</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top8</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top9</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>Top10</span></td>
+                                                    <td>李秋燕</td>
+                                                    <td>45000，000</td>
+                                                    <td><a href="#">查看详情</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="pad20 bgf">
+                        <div class="tit1 clear">
+                            <span class="left txt-left txt-blue"><i class="ico i-rank"></i>今日简报</span>
+                        </div>
+                        <div class="report-list ">
+                            <ul>
+                                <li class="bg-green">
+                                    <a href="#">
+                                        <p class="report-txt1">今日</p>
+                                        <p class="report-txt2"><span class="fz22">￥18770.00</span> <br>20笔</p>
+                                        <p class="report-txt3">2022-09-02</p>
+                                    </a>
+                                </li>
+                                <li class="bg-red">
+                                    <a href="#">
+                                        <p class="report-txt1">本月</p>
+                                        <p class="report-txt2"><span class="fz22">￥18770.00</span> <br>20笔</p>
+                                        <p class="report-txt3">2022-09-02</p>
+                                    </a>
+                                </li>
+                                <li class="bg-blue">
+                                    <a href="#">
+                                        <p class="report-txt1">今年</p>
+                                        <p class="report-txt2"><span class="fz22">￥18770.00</span> <br>20笔</p>
+                                        <p class="report-txt3">2022-09-02</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--sales-list end-->
+
+
+
+        </div>
+
+        <div class="copy">2014 © Metronic by keenthemes. Purchase Metronic!</div>
+    </div>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
