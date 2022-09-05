@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./my-minireset.css" />
+    <style>
+        ul.stage {
+            width: 380px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            /* background-color: lightcoral; */
+            background-image: url(./u=2061915643\,623506618&fm=253&fmt=auto&app=138&f=JPEG.webp);
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /* align-items: center; */
+            align-content: center;
+            margin: 0 auto;
+        }
+
+        ul.stage li {
+            width: 70px;
+            height: 100px;
+            /* background-color: lightblue; */
+            background-image: url(./u=3770264748\,4470310&fm=253&fmt=auto&app=138&f=JPEG.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 5px;
+            color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s;
+            transform-style: preserve-3d;
+
+        }
+
+        ul.stage li.open {
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        ul.stage li.equal {
+            color: white;
+            background-color: aquamarine;
+            transform: rotateY(0deg);
+        }
+
+        ul.stage li i {
+            font-size: 2em;
+        }
+
+        i::before {
+            transform: translateZ(1px);
+            width: 100px;
+            height: 100px;
+            /* background-color: aquamarine; */
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="stage"></ul>
+    <script>
+        var stage = document.querySelector(".stage");
+        var icons = [
+            "fa-bath",
+            "fa-telegram",
+            "fa-anchor",
+            "fa-battery-quarter",
+            "fa-bank",
+            "fa-bug",
+            "fa-bus",
+            "fa-child",
+        ];
+
+        //   把一个数组变成 每项都有两个的
+        function doubleArr(arr) {
+            var tmp = [];
+            arr.forEach(function (e) {
+                tmp.push(e);
+                tmp.push(e);
+            });
+            return tmp;
+        }
+
+        //   洗牌函数
+        function shuffle(arr) {
+            arr.sort(function () {
+                return Math.random() - 0.5;
+            });
+            return arr;
+        }
+
+        var d = doubleArr(icons);
+        var arr = shuffle(shuffle(d));
+        // var arr = d;
+        //   游戏初始化
+        arr.forEach(function (icon) {
+            var node = document.createElement("li");
+            node.innerHTML = '<i class="fa ' + icon + '"></i>';
+            stage.appendChild(node);
+
+            // 每一个卡片都有点击事件
+            node.onclick = function () {
+                if (!this.classList.contains("equal")) {
+                    //   console.log(123, this);
+                    this.classList.add("open");
+
+                    // 查找所有open的li
+                    // 如果有两个就对比 如果有1个不做
+
+                    var openedLis = [];
+                    for (let i = 0; i < stage.children.length; i++) {
+                        if (stage.children[i].classList.contains("open")) {
+                            openedLis.push(stage.children[i]);
+                        }
+                    }
+
+                    //   判断open的个数
+                    if (openedLis.length === 2) {
+                        setTimeout(function () {
+                            openedLis[0].classList.remove("open");
+                            openedLis[1].classList.remove("open");
+
+                            // console.log(openedLis, "判断", openedLis[0].innerHTML === openedLis[1].innerHTML);
+                            // 两个打开的 内部的html一样 相同图标
+                            if (openedLis[0].innerHTML === openedLis[1].innerHTML) {
+                                openedLis[0].classList.add("equal");
+                                openedLis[1].classList.add("equal");
+                            }
+                        }, 500);
+                    }
+                }
+            };
+        });
+    </script>
+</body>
+
+</html>
