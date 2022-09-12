@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.3.3/echarts.min.js"></script>
+    <style>
+      canvas {
+        border: 1px solid #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="my_canvas" width="600" height="400"></canvas>
+
+    <div id="main" style="width: 600px; height: 400px"></div>
+    <br />
+
+    <canvas id="canvas"></canvas>
+
+    <script>
+      var LineChart = function (canvas) {
+        // 获取canvas
+        this.canvas = document.querySelector("canvas");
+        // 获取上下文
+        this.ctx = this.canvas.getContext("2d");
+        // 获取画布的高
+        this.canvasHeight = this.ctx.canvas.height;
+        // 获取画布的宽
+        this.canvasWidth = this.ctx.canvas.width;
+        // 设置网格格子的大小
+        this.gridSize = 10;
+        // 设置坐标系边距
+        this.space = 20;
+        // 设置箭头的长
+        this.arrowSize = 10;
+        // 设置点的大小
+        this.dottedSize = 6;
+      };
+      LineChart.prototype.init = function (data) {
+        this.drawGrid(
+          this.ctx,
+          this.canvasHeight,
+          this.canvasWidth,
+          this.gridSize
+        );
+        this.drawCoord(
+          this.ctx,
+          this.space,
+          this.arrowSize,
+          this.canvasHeight,
+          this.canvasWidth
+        );
+        this.drawDotted(
+          data,
+          this.ctx,
+          this.canvasHeight,
+          this.space,
+          this.dottedSize
+        );
+      };
+      // 绘制网格
+      LineChart.prototype.drawGrid = function (
+        ctx,
+        canvasHeight,
+        canvasWidth,
+        gridSize
+      ) {
+        var xLineTotal = Math.floor(canvasHeight / gridSize);
+        var yLineTotal = Math.floor(canvasWidth / gridSize);
+        // 绘制横线
+        for (var i = 0; i < xLineTotal; i++) {
+          ctx.beginPath();
+          ctx.moveTo(0, i * gridSize - 0.5);
+          ctx.lineTo(canvasWidth, i * gridSize - 0.5);
+          ctx.strokeStyle = "#ddd";
+          ctx.stroke();
+        }
+        // 绘制竖线
+        for (var i = 0; i < yLineTotal; i++) {
+          ctx.beginPath();
+          ctx.moveTo(i * gridSize - 0.5, 0);
+          ctx.lineTo(i * gridSize - 0.5, canvasHeight);
+          ctx.strokeStyle = "#ddd";
+          ctx.stroke();
+        }
+      };
+      //绘制坐标系
+      LineChart.prototype.drawCoord = function (
+        ctx,
+        space,
+        arrowSize,
+        canvasHeight,
+        canvasWidth
+      ) {
+        var x0 = space;
+        var y0 = canvasHeight - space;
+        // 绘制X轴
+        ctx.beginPath();
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(canvasWidth - space, y0);
+        ctx.strokeStyle = "#000";
+        ctx.stroke();
+        ctx.lineTo(canvasWidth - space - arrowSize, y0 + arrowSize / 2);
+        ctx.lineTo(canvasWidth - space - arrowSize, y0 - arrowSize / 2);
+        ctx.lineTo(canvasWidth - space, y0);
+        ctx.fill();
+
+        // 绘制Y轴
+        ctx.beginPath();
+        ctx.moveTo(x0, y0);
+        ctx.lineTo(space, space);
+        ctx.strokeStyle = "#000";
+        ctx.stroke();
+        ctx.lineTo(space + arrowSize / 2, space + arrowSize);
+        ctx.lineTo(space - arrowSize / 2, space + arrowSize);
+        ctx.lineTo(space, space);
+        ctx.fill();
+      };
+      // 绘制点并连线
+      LineChart.prototype.drawDotted = function (
+        data,
+        ctx,
+        canvasHeight,
+        space,
+        dottedSize
+      ) {
+        var x0 = space;
+        var y0 = canvasHeight - space;
+        var prevCanvasX = 0;
+        var prevCanvasY = 0;
+        data.forEach(function (item, i) {
+          var canvasX = x0 + item.x;
+          var canvasY = y0 - item.y;
+          ctx.beginPath();
+          ctx.moveTo(canvasX - dottedSize / 2, canvasY - dottedSize / 2);
+          ctx.lineTo(canvasX + dottedSize / 2, canvasY - dottedSize / 2);
+          ctx.lineTo(canvasX + dottedSize / 2, canvasY + dottedSize / 2);
+          ctx.lineTo(canvasX - dottedSize / 2, canvasY + dottedSize / 2);
+          ctx.closePath();
+          ctx.fill();
+
+          ctx.beginPath();
+          if (i == 0) {
+            ctx.moveTo(x0, y0);
+            ctx.lineTo(canvasX, canvasY);
+            ctx.stroke();
+          } else {
+            // ctx.moveTo(x0+data[i-1].x, y0 - data[i-1].y);
+            ctx.moveTo(prevCanvasX, prevCanvasY);
+            ctx.lineTo(canvasX, canvasY);
+            ctx.stroke();
+          }
+          prevCanvasX = canvasX;
+          prevCanvasY = canvasY;
+        });
+      };
+
+      var data = [
+        {
+          x: 100,
+          y: 100,
+        },
+        {
+          x: 200,
+          y: 85,
+        },
+        {
+          x: 300,
+          y: 125,
+        },
+        {
+          x: 400,
+          y: 200,
+        },
+        {
+          x: 500,
+          y: 330,
+        },
+      ];
+
+      var lineChart = new LineChart("my_canvas");
+      lineChart.init(data);
+    </script>
+
+    <script>
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(document.getElementById("main"), "dark");
+
+      // 指定图表的配置项和数据
+      var option = {
+        aria: {
+          // 下面几行可以不写，因为 label.enabled 默认 true
+          label: {
+            enabled: true,
+          },
+          decal: {
+            show: true,
+          },
+          enabled: true,
+        },
+        title: {
+          text: "ECharts xcxxxx",
+        },
+        tooltip: {},
+        legend: {
+          data: ["销量"],
+        },
+        xAxis: {
+          data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
+        },
+        yAxis: {},
+        series: [
+          {
+            name: "销量",
+            type: "line",
+            smooth: true,
+            areaStyle: {
+              color: "red",
+            },
+            data: [5, 20, 36, 10, 10, 20],
+          },
+        ],
+      };
+
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option);
+    </script>
+
+    <script>
+      let canvas = document.querySelector("#canvas");
+      canvas.width = 500;
+      canvas.height = 500;
+      let ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+
+      ctx.moveTo(50, 100);
+
+      ctx.lineTo(50, 450);
+      ctx.lineTo(450, 450);
+
+      ctx.stroke();
+
+      let context = canvas.getContext("2d");
+
+      context.font = "15px arial";
+      context.fillText("y", 40, 85);
+      context.fillText("x", 455, 460);
+
+      ctx.beginPath();
+      ctx.moveTo(45, 105);
+      ctx.lineTo(50, 100);
+      ctx.lineTo(55, 105);
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.moveTo(445, 445);
+      ctx.lineTo(450, 450);
+      ctx.lineTo(445, 455);
+      ctx.stroke();
+      ctx.closePath();
+
+      let colorArr = [];
+      for (let i = 0; i < 8; i++) {
+        let color = "#" + parseInt(Math.random() * 0xffffff).toString(16);
+        colorArr.push(color);
+      }
+
+      for (let i = 0; i < 8; i++) {
+        let xStart = 80 + i * 50;
+        ctx.beginPath();
+        ctx.moveTo(xStart, 450);
+        ctx.lineTo(xStart, 460);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.fillStyle = colorArr[i];
+        let height = Math.random() * 350;
+        ctx.fillRect(xStart - 10, 450 - height, 20, height);
+        context.font = "12px Arial";
+        context.textAlign = "center";
+        context.fillStyle = "black";
+        context.fillText((xStart - 80) / 50, xStart, 475);
+        ctx.closePath();
+      }
+
+      for (let i = 430; i > 100; i -= 50) {
+        ctx.beginPath();
+        ctx.moveTo(45, i);
+        ctx.lineTo(50, i);
+        ctx.stroke();
+        context.font = "12px Arial";
+
+        context.textAlign = "right";
+        context.fillStyle = "black";
+        context.fillText(Math.abs(i - 430), 40, i);
+        ctx.closePath();
+      }
+
+      for (let i = 0; i < 8; i++) {
+        let x = 100 + i * 40;
+        let y = 30;
+        ctx.fillStyle = colorArr[i];
+        ctx.fillRect(x, y, 25, 20);
+      }
+    </script>
+  </body>
+</html>
