@@ -1,0 +1,62 @@
+.bigbox {
+    width: 772px;
+    height: 100px;
+    background-image: url(图片/bg_header.png);
+    position: relative;
+  }
+  .bigbox .box {
+    position: absolute;
+    bottom: 0;
+    width: 732px;
+    height: 75px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    margin: 5px;
+  }
+  .bigbox .box img {
+    opacity: 0;
+  }
+  .bigbox .box #car1 {
+    width: 69px;
+    height: 69px;
+    background-image: url(图片/126.webp);
+    background-size: cover;
+  }
+  .bigbox .box #car2 {
+    width: 69px;
+    height: 69px;
+    background-image: url(图片/127.webp);
+    background-size: cover;
+  }
+  .bigbox .box #car3 {
+    width: 69px;
+    height: 69px;
+    background-image: url(图片/131.webp);
+    background-size: cover;
+  }
+  .bigbox .box #car4 {
+    width: 69px;
+    height: 69px;
+    background-image: url(图片/173.webp);
+    background-size: cover;
+  }
+  .bigbox .box #car5 {
+    width: 69px;
+    height: 69px;
+    background-image: url(图片/507.webp);
+    background-size: cover;
+  }
+  .bigbox .box #car6 {
+    width: 69px;
+    height: 69px;
+    background-image: url(图片/525.webp);
+    background-size: cover;
+  }
+  .bigbox .box #car7 {
+    width: 69px;
+    height: 69px;
+    background-image: url(图片/531.webp);
+    background-size: cover;
+  }
+  /*# sourceMappingURL=./cs4-1.css.map */
