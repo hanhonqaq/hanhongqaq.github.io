@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .avatar-wrapper {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 2.5rem;
+            border-radius: 20px;
+        }
+
+        html {
+            background: #fff;
+            color: #000
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif
+        }
+
+        .pic {
+            position: relative;
+            width: 480px;
+            height: 270px;
+            display: block;
+            overflow: hidden;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .pic img {
+            margin: 0 auto;
+            outline: 0;
+        }
+
+        .cpm {
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity .3s;
+        }
+
+        .progress-bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 10px;
+            border-color: #000;
+            border-style: solid;
+            border-width: 4px 8px;
+            background: #444;
+            box-sizing: border-box;
+        }
+
+        .cpm .progress-bar span {
+            display: block;
+            background: #fff;
+            height: 2px;
+            width: 0;
+        }
+
+        .show {
+            opacity: 1;
+        }
+
+        .cpm .cover {
+            position: absolute;
+            left: 0;
+            top: 7px;
+            height: 270px;
+            width: 100%;
+            margin-top: 2px;
+        }
+
+        .dm {
+            position: absolute;
+            left: 0;
+            top: 15px;
+            height: 135px;
+            width: 100%;
+        }
+
+        p {
+            position: absolute;
+            right: -500px;
+            color: #fff;
+            z-index: 3;
+            white-space: nowrap;
+            font-size: 15px;
+        }
+
+        .lazy-img {
+            position: relative;
+            z-index: 99;
+        }
+
+        .time {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 10px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="avatar-wrapper">
+        <div class="pic">
+            <div class="lazy-img">
+                <img src="./图片/eee63cd.webp" style="width: 480px;">
+            </div>
+            <div class="cpm show">
+                <div class="cover"></div>
+                <div class="progress-bar"><span></span></div>
+                <div class="dm"></div>
+                <div class="time">21:40</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var data = {
+            "len_x": 10,
+            "width": 480,
+            "height": 270,
+        };
+        var pic = document.querySelectorAll('.pic')[0];
+        var span = document.querySelectorAll('.cpm .progress-bar span')[0];
+        var dm = document.querySelectorAll('.dm')[0];
+        var img = document.querySelectorAll('.lazy-img')[0];
+
+        var dms = [
+            "章鱼哥还是没有胜过强风暴雨(doge)",
+            "日本裁判",
+            "日本裁判",
+            "海绵宝宝笑死我了",
+            "黑人小哥",
+            "堡垒之夜",
+            "最喜欢的一集",
+            "最喜欢的一集",
+            "喜欢",
+            "我怎么觉得派大星这个配音我在神奇宝贝里听过",
+            "我看见你了",
+            "但凡章鱼哥早点回去都不至于这样",
+            "这……这我还真有可能“模仿”",
+            "为什么非要执着于台配或者央配呢",
+            "派总依旧稳定输出",
+            "包租公～",
+            "为什么台配的海绵宝宝跟低能儿似的",
+            "井字游戏，其实可以先手必胜的",
+            "我小时候就看的台配",
+            "终于找到了",
+        ];
+
+        dms.forEach(function (itme) {
+            var p = document.createElement('p');
+            p.innerText = itme;
+            dm.appendChild(p);
+        })
+
+        $(".pic").mousemove(function (event) {
+
+            var t = event.offsetX;
+            this.width = 480;
+            this.height = 270;
+
+            span.style.width = t * 464 / 480 + 'px'
+
+            var a = 171,
+                e = data.height / data.width * this.width;
+            this.progress = Math.floor(t / this.width * 100),
+                this.size = this.width * data.len_x;
+            var i = Math.floor(t / this.width * a);
+            this.x = -i % data.len_x * this.width,
+                this.y = -Math.floor(i / data.len_x) * e;
+
+            var self = this;
+
+            if (t <= 283) {
+                $('.cover').css({
+                    backgroundImage: "url(./图片/486142478_dc4dcb-0001.jpg)",
+                    backgroundPosition: self.x + "px " + self.y + "px",
+                    backgroundSize: self.size + "px"
+                })
+            } else {
+                $('.cover').css({
+                    backgroundImage: "url(./图片/486142478_dc4dcb-0002.jpg)",
+                    backgroundPosition: self.x + "px " + self.y + "px",
+                    backgroundSize: self.size + "px"
+                })
+            }
+        });
+
+        var dms = document.getElementsByTagName('p')
+        var danmuModule = document.querySelector('.dm')
+        var picWidth = pic.getBoundingClientRect().width
+
+        pic.onmouseenter = function () {
+            img.style.display = 'none';
+            danmuRunning()
+        }
+
+        pic.onmouseleave = function () {
+            img.style.display = 'block';
+            clearInterval(pic.timer)
+        }
+
+        function danmuRunning() {
+
+            var count = 0
+
+            pic.timer = setInterval(function () {
+
+                count = (count + 1) % 40
+
+                if (count === 39) {
+
+                    for (var i = 0; i < dms.length; i++) {
+                        var dm = dms[i]
+
+                        if (!dm.isflying) {
+                            dm.isflying = true
+                            dm.speed = Math.ceil(Math.random() * 3)
+                            dm.style.right = '-' + getComputedStyle(dm, null).width
+                            dm.style.top = Math.floor(Math.random() * 3) * 20 + 'px'
+                            danmuModule.appendChild(dm)
+                            break
+                        }
+                    }
+                }
+
+                for (var i = 0; i < dms.length; i++) {
+                    var dm = dms[i]
+                    if (dm.isflying) {
+                        var moveRight = parseInt(dm.style.right)
+                        if (moveRight > picWidth) {
+                            dm.isflying = false
+                            continue
+                        }
+                        dm.style.right = moveRight + dm.speed + 'px'
+                    }
+
+                }
+
+            }, 30)
+
+        }
+    </script>
+
+</body>
+
+</html>

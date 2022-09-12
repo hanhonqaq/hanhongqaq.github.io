@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var citys = [{
+                id: 1,
+                nm: "北京",
+                py: "beijing"
+            },
+            {
+                id: 45,
+                nm: "重庆",
+                py: "chongqing"
+            },
+            {
+                id: 59,
+                nm: "成都",
+                py: "chengdu"
+            },
+            {
+                id: 70,
+                nm: "长沙",
+                py: "changsha"
+            },
+            {
+                id: 84,
+                nm: "保定",
+                py: "baoding"
+            },
+            {
+                id: 88,
+                nm: "蚌埠",
+                py: "bengbu"
+            },
+            {
+                id: 89,
+                nm: "常州",
+                py: "changzhou"
+            },
+            {
+                id: 150,
+                nm: "阿拉善盟",
+                py: "alashanmeng"
+            },
+            {
+                id: 151,
+                nm: "鞍山",
+                py: "anshan"
+            },
+            {
+                id: 197,
+                nm: "安庆",
+                py: "anqing"
+            },
+            {
+                id: 238,
+                nm: "安阳",
+                py: "anyang"
+            },
+            {
+                id: 700,
+                nm: "承德县",
+                py: "chengdexian"
+            },
+        ];
+
+        var citysItem = [];
+        var vartArr = [];
+        for (var i = 0; i < citys.length; i++) {
+            var varter = citys[i].py.replace(/[^a-zA-Z]/g, '').length > 0 ? citys[i].py.replace(
+                /[^a-zA-Z]/g, '').substring(0, 1) : '';
+            if (vartArr.indexOf(varter) <= -1) {
+                vartArr.push(varter);
+            }
+        }
+
+        vartArr = vartArr.sort()
+
+        for (var i = 0; i < vartArr.length; i++) {
+            var tempCityObjArr = [];
+            var tempObj = {};
+            var varterTemp = vartArr[i];
+            tempObj.varter = varterTemp;
+            for (var j = 0; j < citys.length; j++) {
+                var varter = citys[j].py.replace(/[^a-zA-Z]/g, '').substring(0, 1);
+                if (varterTemp === varter) {
+                    tempCityObjArr.push(citys[j]);
+                }
+            }
+            tempObj.citys = tempCityObjArr;
+            citysItem.push(tempObj);
+        }
+
+        console.log(citysItem);
+    </script>
+</body>
+
+</html>
